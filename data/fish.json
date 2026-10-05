@@ -1,0 +1,4343 @@
+[
+ {
+  "name": "Pufferfish",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 200,
+  "locations": [
+   {
+    "place": "Beach",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Ginger Island",
+    "detail": "ocean",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Blue Moon Vineyard",
+    "detail": "ocean",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "summer"
+  ],
+  "seasonNote": "Ginger Island: all seasons",
+  "time": [
+   [
+    12,
+    16
+   ]
+  ],
+  "weather": "sun",
+  "minLevel": 0,
+  "difficulty": 80,
+  "behavior": "floater",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/b/ba/Pufferfish.png",
+  "wiki": "https://stardewvalleywiki.com/Pufferfish",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": [
+   "Abigail"
+  ]
+ },
+ {
+  "name": "Anchovy",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 30,
+  "locations": [
+   {
+    "place": "Beach",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Blue Moon Vineyard",
+    "detail": "ocean",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "fall"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 30,
+  "behavior": "dart",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/7/79/Anchovy.png",
+  "wiki": "https://stardewvalleywiki.com/Anchovy",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Tuna",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 100,
+  "locations": [
+   {
+    "place": "Beach",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Ginger Island",
+    "detail": "ocean",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Blue Moon Vineyard",
+    "detail": "ocean",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "summer",
+   "winter"
+  ],
+  "seasonNote": "Ginger Island: all seasons",
+  "time": [
+   [
+    6,
+    19
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 70,
+  "behavior": "smooth",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/c/c5/Tuna.png",
+  "wiki": "https://stardewvalleywiki.com/Tuna",
+  "notes": "",
+  "recipes": [
+   "Fish Taco"
+  ],
+  "lovedBy": []
+ },
+ {
+  "name": "Sardine",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 40,
+  "locations": [
+   {
+    "place": "Beach",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Blue Moon Vineyard",
+    "detail": "ocean",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    19
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 30,
+  "behavior": "dart",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/0/04/Sardine.png",
+  "wiki": "https://stardewvalleywiki.com/Sardine",
+  "notes": "",
+  "recipes": [
+   "Dish O' The Sea"
+  ],
+  "lovedBy": []
+ },
+ {
+  "name": "Bream",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 45,
+  "locations": [
+   {
+    "place": "Town",
+    "detail": "river",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Cindersap Forest",
+    "detail": "river",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Forest West",
+    "detail": "",
+    "sve": true,
+    "spoiler": false
+   },
+   {
+    "place": "Blue Moon Vineyard",
+    "detail": "river",
+    "sve": true,
+    "spoiler": false
+   },
+   {
+    "place": "Shearwater Bridge",
+    "detail": "Winter only",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    18,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 35,
+  "behavior": "smooth",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/8/82/Bream.png",
+  "wiki": "https://stardewvalleywiki.com/Bream",
+  "notes": "",
+  "recipes": [
+   "Baked Fish"
+  ],
+  "lovedBy": []
+ },
+ {
+  "name": "Largemouth Bass",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 100,
+  "locations": [
+   {
+    "place": "Mountain Lake",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Forest West",
+    "detail": "",
+    "sve": true,
+    "spoiler": false
+   },
+   {
+    "place": "Adventurer Summit",
+    "detail": "",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    19
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 50,
+  "behavior": "mixed",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/1/11/Largemouth_Bass.png",
+  "wiki": "https://stardewvalleywiki.com/Largemouth_Bass",
+  "notes": "",
+  "recipes": [
+   "Crispy Bass"
+  ],
+  "lovedBy": []
+ },
+ {
+  "name": "Smallmouth Bass",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 50,
+  "locations": [
+   {
+    "place": "Town",
+    "detail": "river",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Cindersap Forest",
+    "detail": "pond",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Blue Moon Vineyard",
+    "detail": "river",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "fall"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 28,
+  "behavior": "mixed",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/a/a5/Smallmouth_Bass.png",
+  "wiki": "https://stardewvalleywiki.com/Smallmouth_Bass",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Rainbow Trout",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 65,
+  "locations": [
+   {
+    "place": "Town",
+    "detail": "river",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Cindersap Forest",
+    "detail": "river",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Mountain Lake",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Forest West",
+    "detail": "",
+    "sve": true,
+    "spoiler": false
+   },
+   {
+    "place": "Blue Moon Vineyard",
+    "detail": "river",
+    "sve": true,
+    "spoiler": false
+   },
+   {
+    "place": "Shearwater Bridge",
+    "detail": "",
+    "sve": true,
+    "spoiler": false
+   },
+   {
+    "place": "Adventurer Summit",
+    "detail": "",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "summer"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    19
+   ]
+  ],
+  "weather": "sun",
+  "minLevel": 0,
+  "difficulty": 45,
+  "behavior": "mixed",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/1/14/Rainbow_Trout.png",
+  "wiki": "https://stardewvalleywiki.com/Rainbow_Trout",
+  "notes": "",
+  "recipes": [
+   "Trout Soup"
+  ],
+  "lovedBy": []
+ },
+ {
+  "name": "Salmon",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 75,
+  "locations": [
+   {
+    "place": "Town",
+    "detail": "river",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Cindersap Forest",
+    "detail": "river",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Cindersap Forest",
+    "detail": "waterfalls",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Forest West",
+    "detail": "",
+    "sve": true,
+    "spoiler": false
+   },
+   {
+    "place": "Blue Moon Vineyard",
+    "detail": "river",
+    "sve": true,
+    "spoiler": false
+   },
+   {
+    "place": "Shearwater Bridge",
+    "detail": "",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "fall"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    19
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 50,
+  "behavior": "mixed",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/e/e0/Salmon.png",
+  "wiki": "https://stardewvalleywiki.com/Salmon",
+  "notes": "",
+  "recipes": [
+   "Salmon Dinner"
+  ],
+  "lovedBy": []
+ },
+ {
+  "name": "Walleye",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 105,
+  "locations": [
+   {
+    "place": "Town",
+    "detail": "river",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Cindersap Forest",
+    "detail": "river",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Cindersap Forest",
+    "detail": "pond",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Mountain Lake",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Forest West",
+    "detail": "",
+    "sve": true,
+    "spoiler": false
+   },
+   {
+    "place": "Blue Moon Vineyard",
+    "detail": "river",
+    "sve": true,
+    "spoiler": false
+   },
+   {
+    "place": "Shearwater Bridge",
+    "detail": "",
+    "sve": true,
+    "spoiler": false
+   },
+   {
+    "place": "Adventurer Summit",
+    "detail": "",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "fall"
+  ],
+  "seasonNote": "Winter with Rain Totem",
+  "time": [
+   [
+    12,
+    26
+   ]
+  ],
+  "weather": "rain",
+  "minLevel": 0,
+  "difficulty": 45,
+  "behavior": "smooth",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/0/05/Walleye.png",
+  "wiki": "https://stardewvalleywiki.com/Walleye",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Perch",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 55,
+  "locations": [
+   {
+    "place": "Town",
+    "detail": "river",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Cindersap Forest",
+    "detail": "river",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Cindersap Forest",
+    "detail": "pond",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Mountain Lake",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Blue Moon Vineyard",
+    "detail": "river",
+    "sve": true,
+    "spoiler": false
+   },
+   {
+    "place": "Shearwater Bridge",
+    "detail": "",
+    "sve": true,
+    "spoiler": false
+   },
+   {
+    "place": "Adventurer Summit",
+    "detail": "",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 35,
+  "behavior": "dart",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/4/43/Perch.png",
+  "wiki": "https://stardewvalleywiki.com/Perch",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Carp",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 30,
+  "locations": [
+   {
+    "place": "Mountain Lake",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Secret Woods",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Sewers",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Mutant Bug Lair",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Adventurer Summit",
+    "detail": "Spring, Summer, Fall only",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 15,
+  "behavior": "mixed",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/a/a8/Carp.png",
+  "wiki": "https://stardewvalleywiki.com/Carp",
+  "notes": "",
+  "recipes": [
+   "Carp Surprise"
+  ],
+  "lovedBy": []
+ },
+ {
+  "name": "Catfish",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 200,
+  "locations": [
+   {
+    "place": "Town",
+    "detail": "river",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Cindersap Forest",
+    "detail": "river",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Secret Woods",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Witch's Swamp",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Forest West",
+    "detail": "",
+    "sve": true,
+    "spoiler": false
+   },
+   {
+    "place": "Blue Moon Vineyard",
+    "detail": "river",
+    "sve": true,
+    "spoiler": false
+   },
+   {
+    "place": "Shearwater Bridge",
+    "detail": "",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "fall"
+  ],
+  "seasonNote": "Secret Woods Pond: Spring & Summer; Winter with Rain Totem",
+  "time": [
+   [
+    6,
+    24
+   ]
+  ],
+  "weather": "rain",
+  "minLevel": 0,
+  "difficulty": 75,
+  "behavior": "mixed",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/9/99/Catfish.png",
+  "wiki": "https://stardewvalleywiki.com/Catfish",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": [
+   "Willy"
+  ]
+ },
+ {
+  "name": "Pike",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 100,
+  "locations": [
+   {
+    "place": "Town",
+    "detail": "river",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Cindersap Forest",
+    "detail": "river",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Cindersap Forest",
+    "detail": "pond",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Forest West",
+    "detail": "Spring, Winter only",
+    "sve": true,
+    "spoiler": false
+   },
+   {
+    "place": "Blue Moon Vineyard",
+    "detail": "river",
+    "sve": true,
+    "spoiler": false
+   },
+   {
+    "place": "Shearwater Bridge",
+    "detail": "",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "summer",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 60,
+  "behavior": "dart",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/3/31/Pike.png",
+  "wiki": "https://stardewvalleywiki.com/Pike",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Sunfish",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 30,
+  "locations": [
+   {
+    "place": "Town",
+    "detail": "river",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Cindersap Forest",
+    "detail": "river",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Forest West",
+    "detail": "Spring only",
+    "sve": true,
+    "spoiler": false
+   },
+   {
+    "place": "Blue Moon Vineyard",
+    "detail": "river",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    19
+   ]
+  ],
+  "weather": "sun",
+  "minLevel": 0,
+  "difficulty": 30,
+  "behavior": "mixed",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/5/56/Sunfish.png",
+  "wiki": "https://stardewvalleywiki.com/Sunfish",
+  "notes": "",
+  "recipes": [
+   "Baked Fish"
+  ],
+  "lovedBy": []
+ },
+ {
+  "name": "Red Mullet",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 75,
+  "locations": [
+   {
+    "place": "Beach",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Blue Moon Vineyard",
+    "detail": "ocean",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "summer",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    19
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 55,
+  "behavior": "smooth",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/f/f2/Red_Mullet.png",
+  "wiki": "https://stardewvalleywiki.com/Red_Mullet",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Herring",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 30,
+  "locations": [
+   {
+    "place": "Beach",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Blue Moon Vineyard",
+    "detail": "ocean",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 25,
+  "behavior": "dart",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/f/f1/Herring.png",
+  "wiki": "https://stardewvalleywiki.com/Herring",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Eel",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 85,
+  "locations": [
+   {
+    "place": "Beach",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Blue Moon Vineyard",
+    "detail": "ocean",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "fall"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    16,
+    26
+   ]
+  ],
+  "weather": "rain",
+  "minLevel": 0,
+  "difficulty": 70,
+  "behavior": "smooth",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/9/91/Eel.png",
+  "wiki": "https://stardewvalleywiki.com/Eel",
+  "notes": "",
+  "recipes": [
+   "Fried Eel",
+   "Spicy Eel"
+  ],
+  "lovedBy": []
+ },
+ {
+  "name": "Octopus",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 150,
+  "locations": [
+   {
+    "place": "Beach",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Ginger Island",
+    "detail": "ocean",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Blue Moon Vineyard",
+    "detail": "ocean",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "summer"
+  ],
+  "seasonNote": "Ginger Island: all seasons",
+  "time": [
+   [
+    6,
+    13
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 95,
+  "behavior": "sinker",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/5/5a/Octopus.png",
+  "wiki": "https://stardewvalleywiki.com/Octopus",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": [
+   "Willy"
+  ]
+ },
+ {
+  "name": "Red Snapper",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 50,
+  "locations": [
+   {
+    "place": "Beach",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Blue Moon Vineyard",
+    "detail": "ocean",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "summer",
+   "fall"
+  ],
+  "seasonNote": "Winter with Rain Totem",
+  "time": [
+   [
+    6,
+    19
+   ]
+  ],
+  "weather": "rain",
+  "minLevel": 0,
+  "difficulty": 40,
+  "behavior": "mixed",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/d/d3/Red_Snapper.png",
+  "wiki": "https://stardewvalleywiki.com/Red_Snapper",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Squid",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 80,
+  "locations": [
+   {
+    "place": "Beach",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Blue Moon Vineyard",
+    "detail": "ocean",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    18,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 75,
+  "behavior": "sinker",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/8/81/Squid.png",
+  "wiki": "https://stardewvalleywiki.com/Squid",
+  "notes": "",
+  "recipes": [
+   "Fried Calamari"
+  ],
+  "lovedBy": []
+ },
+ {
+  "name": "Sea Cucumber",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 75,
+  "locations": [
+   {
+    "place": "Beach",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Blue Moon Vineyard",
+    "detail": "ocean",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    19
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 40,
+  "behavior": "sinker",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/a/a9/Sea_Cucumber.png",
+  "wiki": "https://stardewvalleywiki.com/Sea_Cucumber",
+  "notes": "",
+  "recipes": [
+   "Lucky Lunch"
+  ],
+  "lovedBy": [
+   "Willy"
+  ]
+ },
+ {
+  "name": "Super Cucumber",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 250,
+  "locations": [
+   {
+    "place": "Beach",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Ginger Island",
+    "detail": "ocean",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Blue Moon Vineyard",
+    "detail": "ocean",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "summer",
+   "fall"
+  ],
+  "seasonNote": "Ginger Island: all seasons",
+  "time": [
+   [
+    18,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 80,
+  "behavior": "sinker",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/d/d5/Super_Cucumber.png",
+  "wiki": "https://stardewvalleywiki.com/Super_Cucumber",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": [
+   "Wizard"
+  ]
+ },
+ {
+  "name": "Ghostfish",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 45,
+  "locations": [
+   {
+    "place": "Mines",
+    "detail": "floors 20 and 60",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Mines",
+    "detail": "dropped by Ghosts",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 50,
+  "behavior": "mixed",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/7/72/Ghostfish.png",
+  "wiki": "https://stardewvalleywiki.com/Ghostfish",
+  "notes": "Also dropped by Ghosts.",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Stonefish",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 300,
+  "locations": [
+   {
+    "place": "Mines",
+    "detail": "floor 20",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 65,
+  "behavior": "sinker",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/0/03/Stonefish.png",
+  "wiki": "https://stardewvalleywiki.com/Stonefish",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Ice Pip",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 500,
+  "locations": [
+   {
+    "place": "Mines",
+    "detail": "floor 60",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 85,
+  "behavior": "dart",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/6/63/Ice_Pip.png",
+  "wiki": "https://stardewvalleywiki.com/Ice_Pip",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Lava Eel",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 700,
+  "locations": [
+   {
+    "place": "Mines",
+    "detail": "floor 100",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Volcano",
+    "detail": "caldera",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 90,
+  "behavior": "mixed",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/1/12/Lava_Eel.png",
+  "wiki": "https://stardewvalleywiki.com/Lava_Eel",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": [
+   "Dwarf"
+  ]
+ },
+ {
+  "name": "Sandfish",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 75,
+  "locations": [
+   {
+    "place": "Desert",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    20
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 65,
+  "behavior": "mixed",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/b/bb/Sandfish.png",
+  "wiki": "https://stardewvalleywiki.com/Sandfish",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": [
+   "Penny"
+  ]
+ },
+ {
+  "name": "Scorpion Carp",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 150,
+  "locations": [
+   {
+    "place": "Desert",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    20
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 4,
+  "difficulty": 90,
+  "behavior": "dart",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/7/76/Scorpion_Carp.png",
+  "wiki": "https://stardewvalleywiki.com/Scorpion_Carp",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Flounder",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 100,
+  "locations": [
+   {
+    "place": "Beach",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Ginger Island",
+    "detail": "ocean",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Blue Moon Vineyard",
+    "detail": "ocean",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer"
+  ],
+  "seasonNote": "Ginger Island: all seasons",
+  "time": [
+   [
+    6,
+    20
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 50,
+  "behavior": "sinker",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/8/85/Flounder.png",
+  "wiki": "https://stardewvalleywiki.com/Flounder",
+  "notes": "",
+  "recipes": [
+   "Seafoam Pudding"
+  ],
+  "lovedBy": []
+ },
+ {
+  "name": "Midnight Carp",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 150,
+  "locations": [
+   {
+    "place": "Cindersap Forest",
+    "detail": "pond",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Mountain Lake",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Ginger Island",
+    "detail": "river",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Shearwater Bridge",
+    "detail": "",
+    "sve": true,
+    "spoiler": false
+   },
+   {
+    "place": "Adventurer Summit",
+    "detail": "",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "Ginger Island: all seasons",
+  "time": [
+   [
+    22,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 55,
+  "behavior": "mixed",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/3/33/Midnight_Carp.png",
+  "wiki": "https://stardewvalleywiki.com/Midnight_Carp",
+  "notes": "",
+  "recipes": [
+   "Seafoam Pudding"
+  ],
+  "lovedBy": []
+ },
+ {
+  "name": "Sturgeon",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 200,
+  "locations": [
+   {
+    "place": "Mountain Lake",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Adventurer Summit",
+    "detail": "",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "summer",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    19
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 78,
+  "behavior": "mixed",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/4/42/Sturgeon.png",
+  "wiki": "https://stardewvalleywiki.com/Sturgeon",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": [
+   "Willy"
+  ]
+ },
+ {
+  "name": "Tiger Trout",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 150,
+  "locations": [
+   {
+    "place": "Town",
+    "detail": "river",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Cindersap Forest",
+    "detail": "river",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Forest West",
+    "detail": "Fall only",
+    "sve": true,
+    "spoiler": false
+   },
+   {
+    "place": "Blue Moon Vineyard",
+    "detail": "river",
+    "sve": true,
+    "spoiler": false
+   },
+   {
+    "place": "Shearwater Bridge",
+    "detail": "",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    19
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 60,
+  "behavior": "dart",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/0/01/Tiger_Trout.png",
+  "wiki": "https://stardewvalleywiki.com/Tiger_Trout",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Bullhead",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 75,
+  "locations": [
+   {
+    "place": "Mountain Lake",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Adventurer Summit",
+    "detail": "",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 46,
+  "behavior": "smooth",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/d/db/Bullhead.png",
+  "wiki": "https://stardewvalleywiki.com/Bullhead",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Tilapia",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 75,
+  "locations": [
+   {
+    "place": "Beach",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Ginger Island",
+    "detail": "river",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Blue Moon Vineyard",
+    "detail": "ocean",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "summer",
+   "fall"
+  ],
+  "seasonNote": "Ginger Island: all seasons",
+  "time": [
+   [
+    6,
+    14
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 50,
+  "behavior": "mixed",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/7/73/Tilapia.png",
+  "wiki": "https://stardewvalleywiki.com/Tilapia",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Chub",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 50,
+  "locations": [
+   {
+    "place": "Cindersap Forest",
+    "detail": "river",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Mountain Lake",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Adventurer Summit",
+    "detail": "",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 35,
+  "behavior": "dart",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/b/bd/Chub.png",
+  "wiki": "https://stardewvalleywiki.com/Chub",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Dorado",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 100,
+  "locations": [
+   {
+    "place": "Cindersap Forest",
+    "detail": "river",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Forest West",
+    "detail": "",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "summer"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    19
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 78,
+  "behavior": "mixed",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/1/18/Dorado.png",
+  "wiki": "https://stardewvalleywiki.com/Dorado",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Albacore",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 75,
+  "locations": [
+   {
+    "place": "Beach",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Blue Moon Vineyard",
+    "detail": "ocean",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    11
+   ],
+   [
+    18,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 60,
+  "behavior": "mixed",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/e/e1/Albacore.png",
+  "wiki": "https://stardewvalleywiki.com/Albacore",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Shad",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 60,
+  "locations": [
+   {
+    "place": "Town",
+    "detail": "river",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Cindersap Forest",
+    "detail": "river",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Blue Moon Vineyard",
+    "detail": "river",
+    "sve": true,
+    "spoiler": false
+   },
+   {
+    "place": "Shearwater Bridge",
+    "detail": "",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    9,
+    26
+   ]
+  ],
+  "weather": "rain",
+  "minLevel": 0,
+  "difficulty": 45,
+  "behavior": "smooth",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/e/ef/Shad.png",
+  "wiki": "https://stardewvalleywiki.com/Shad",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Lingcod",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 120,
+  "locations": [
+   {
+    "place": "Town",
+    "detail": "river",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Cindersap Forest",
+    "detail": "river",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Mountain Lake",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Forest West",
+    "detail": "",
+    "sve": true,
+    "spoiler": false
+   },
+   {
+    "place": "Blue Moon Vineyard",
+    "detail": "river",
+    "sve": true,
+    "spoiler": false
+   },
+   {
+    "place": "Shearwater Bridge",
+    "detail": "",
+    "sve": true,
+    "spoiler": false
+   },
+   {
+    "place": "Adventurer Summit",
+    "detail": "",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 85,
+  "behavior": "mixed",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/8/87/Lingcod.png",
+  "wiki": "https://stardewvalleywiki.com/Lingcod",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Halibut",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 80,
+  "locations": [
+   {
+    "place": "Beach",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Blue Moon Vineyard",
+    "detail": "ocean",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    11
+   ],
+   [
+    19,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 50,
+  "behavior": "sinker",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/0/02/Halibut.png",
+  "wiki": "https://stardewvalleywiki.com/Halibut",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Woodskip",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 75,
+  "locations": [
+   {
+    "place": "Secret Woods",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Farm",
+    "detail": "Forest Farm map",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 50,
+  "behavior": "mixed",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/9/97/Woodskip.png",
+  "wiki": "https://stardewvalleywiki.com/Woodskip",
+  "notes": "Forest Farm: also in farm ponds/rivers.",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Void Salmon",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 150,
+  "locations": [
+   {
+    "place": "Witch's Swamp",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 80,
+  "behavior": "mixed",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/a/ad/Void_Salmon.png",
+  "wiki": "https://stardewvalleywiki.com/Void_Salmon",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Slimejack",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 100,
+  "locations": [
+   {
+    "place": "Mutant Bug Lair",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 55,
+  "behavior": "dart",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/3/34/Slimejack.png",
+  "wiki": "https://stardewvalleywiki.com/Slimejack",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Stingray",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 180,
+  "locations": [
+   {
+    "place": "Ginger Island",
+    "detail": "Pirate Cove",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 80,
+  "behavior": "sinker",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/3/3a/Stingray.png",
+  "wiki": "https://stardewvalleywiki.com/Stingray",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Lionfish",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 100,
+  "locations": [
+   {
+    "place": "Ginger Island",
+    "detail": "ocean",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 50,
+  "behavior": "smooth",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/b/bb/Lionfish.png",
+  "wiki": "https://stardewvalleywiki.com/Lionfish",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Blue Discus",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 120,
+  "locations": [
+   {
+    "place": "Ginger Island",
+    "detail": "river",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 60,
+  "behavior": "dart",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/e/ee/Blue_Discus.png",
+  "wiki": "https://stardewvalleywiki.com/Blue_Discus",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Goby",
+  "source": "vanilla",
+  "category": "fish",
+  "price": 150,
+  "locations": [
+   {
+    "place": "Cindersap Forest",
+    "detail": "waterfalls",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 55,
+  "behavior": "dart",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/6/67/Goby.png",
+  "wiki": "https://stardewvalleywiki.com/Goby",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Midnight Squid",
+  "source": "vanilla",
+  "category": "night-market",
+  "price": 100,
+  "locations": [
+   {
+    "place": "Night Market",
+    "detail": "submarine ride, Winter 15–17",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Beach",
+    "detail": "southwest corner, Magic Bait only",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "winter"
+  ],
+  "seasonNote": "Night Market only: Winter 15-17",
+  "time": [
+   [
+    17,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 55,
+  "behavior": "sinker",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/8/83/Midnight_Squid.png",
+  "wiki": "https://stardewvalleywiki.com/Midnight_Squid",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Spook Fish",
+  "source": "vanilla",
+  "category": "night-market",
+  "price": 220,
+  "locations": [
+   {
+    "place": "Night Market",
+    "detail": "submarine ride, Winter 15–17",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Beach",
+    "detail": "southwest corner, Magic Bait only",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "winter"
+  ],
+  "seasonNote": "Night Market only: Winter 15-17",
+  "time": [
+   [
+    17,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 60,
+  "behavior": "dart",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/8/8c/Spook_Fish.png",
+  "wiki": "https://stardewvalleywiki.com/Spook_Fish",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Blobfish",
+  "source": "vanilla",
+  "category": "night-market",
+  "price": 500,
+  "locations": [
+   {
+    "place": "Night Market",
+    "detail": "submarine ride, Winter 15–17",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Beach",
+    "detail": "southwest corner, Magic Bait only",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "winter"
+  ],
+  "seasonNote": "Night Market only: Winter 15-17",
+  "time": [
+   [
+    17,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 75,
+  "behavior": "floater",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/7/7f/Blobfish.png",
+  "wiki": "https://stardewvalleywiki.com/Blobfish",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Crimsonfish",
+  "source": "vanilla",
+  "category": "legendary",
+  "price": 1500,
+  "locations": [
+   {
+    "place": "Beach",
+    "detail": "east pier",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "summer"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 5,
+  "difficulty": 95,
+  "behavior": "mixed",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/d/dc/Crimsonfish.png",
+  "wiki": "https://stardewvalleywiki.com/Crimsonfish",
+  "notes": "Legendary: can only be caught once per save (per player in multiplayer).",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Angler",
+  "source": "vanilla",
+  "category": "legendary",
+  "price": 900,
+  "locations": [
+   {
+    "place": "Town",
+    "detail": "waterfall north of JojaMart",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "fall"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 3,
+  "difficulty": 85,
+  "behavior": "smooth",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/b/bf/Angler.png",
+  "wiki": "https://stardewvalleywiki.com/Angler",
+  "notes": "Legendary: can only be caught once per save (per player in multiplayer).",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Legend",
+  "source": "vanilla",
+  "category": "legendary",
+  "price": 5000,
+  "locations": [
+   {
+    "place": "Mountain Lake",
+    "detail": "by the log",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "rain",
+  "minLevel": 10,
+  "difficulty": 110,
+  "behavior": "mixed",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/1/10/Legend.png",
+  "wiki": "https://stardewvalleywiki.com/Legend",
+  "notes": "Legendary: can only be caught once per save (per player in multiplayer).",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Glacierfish",
+  "source": "vanilla",
+  "category": "legendary",
+  "price": 1000,
+  "locations": [
+   {
+    "place": "Cindersap Forest",
+    "detail": "south tip of Arrowhead Island",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 6,
+  "difficulty": 100,
+  "behavior": "mixed",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/f/fd/Glacierfish.png",
+  "wiki": "https://stardewvalleywiki.com/Glacierfish",
+  "notes": "Legendary: can only be caught once per save (per player in multiplayer).",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Mutant Carp",
+  "source": "vanilla",
+  "category": "legendary",
+  "price": 1000,
+  "locations": [
+   {
+    "place": "Sewers",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 80,
+  "behavior": "dart",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/c/cb/Mutant_Carp.png",
+  "wiki": "https://stardewvalleywiki.com/Mutant_Carp",
+  "notes": "Legendary: can only be caught once per save (per player in multiplayer).",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Son of Crimsonfish",
+  "source": "vanilla",
+  "category": "legendary2",
+  "price": 1500,
+  "locations": [
+   {
+    "place": "Beach",
+    "detail": "east pier",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 5,
+  "difficulty": 95,
+  "behavior": "mixed",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/1/12/Son_of_Crimsonfish.png",
+  "wiki": "https://stardewvalleywiki.com/Son_of_Crimsonfish",
+  "notes": "Only catchable during Mr. Qi's 'Extended Family' special order. Not required for Master Angler.",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Ms. Angler",
+  "source": "vanilla",
+  "category": "legendary2",
+  "price": 900,
+  "locations": [
+   {
+    "place": "Town",
+    "detail": "waterfall north of JojaMart",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 3,
+  "difficulty": 85,
+  "behavior": "smooth",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/b/bb/Ms._Angler.png",
+  "wiki": "https://stardewvalleywiki.com/Ms._Angler",
+  "notes": "Only catchable during Mr. Qi's 'Extended Family' special order. Not required for Master Angler.",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Legend II",
+  "source": "vanilla",
+  "category": "legendary2",
+  "price": 5000,
+  "locations": [
+   {
+    "place": "Mountain Lake",
+    "detail": "by the log",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 10,
+  "difficulty": 110,
+  "behavior": "mixed",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/7/7a/Legend_II.png",
+  "wiki": "https://stardewvalleywiki.com/Legend_II",
+  "notes": "Only catchable during Mr. Qi's 'Extended Family' special order. Not required for Master Angler.",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Glacierfish Jr.",
+  "source": "vanilla",
+  "category": "legendary2",
+  "price": 1000,
+  "locations": [
+   {
+    "place": "Cindersap Forest",
+    "detail": "south tip of Arrowhead Island",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 6,
+  "difficulty": 100,
+  "behavior": "mixed",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/d/db/Glacierfish_Jr..png",
+  "wiki": "https://stardewvalleywiki.com/Glacierfish_Jr.",
+  "notes": "Only catchable during Mr. Qi's 'Extended Family' special order. Not required for Master Angler.",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Radioactive Carp",
+  "source": "vanilla",
+  "category": "legendary2",
+  "price": 1000,
+  "locations": [
+   {
+    "place": "Sewers",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 80,
+  "behavior": "dart",
+  "image": "https://stardewvalleywiki.com/mediawiki/images/5/57/Radioactive_Carp.png",
+  "wiki": "https://stardewvalleywiki.com/Radioactive_Carp",
+  "notes": "Only catchable during Mr. Qi's 'Extended Family' special order. Not required for Master Angler.",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Clam",
+  "source": "vanilla",
+  "category": "crab-pot",
+  "price": 50,
+  "locations": [
+   {
+    "place": "Beach",
+    "detail": "crab pot",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": null,
+  "behavior": null,
+  "image": "https://stardewvalleywiki.com/mediawiki/images/e/ed/Clam.png",
+  "wiki": "https://stardewvalleywiki.com/Clam",
+  "notes": "Caught with Crab Pot; must be crab-pot caught to count for collection.",
+  "recipes": [
+   "Chowder"
+  ],
+  "lovedBy": []
+ },
+ {
+  "name": "Lobster",
+  "source": "vanilla",
+  "category": "crab-pot",
+  "price": 120,
+  "locations": [
+   {
+    "place": "Beach",
+    "detail": "crab pot",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": null,
+  "behavior": null,
+  "image": "https://stardewvalleywiki.com/mediawiki/images/9/9f/Lobster.png",
+  "wiki": "https://stardewvalleywiki.com/Lobster",
+  "notes": "Caught with Crab Pot; must be crab-pot caught to count for collection.",
+  "recipes": [
+   "Lobster Bisque"
+  ],
+  "lovedBy": [
+   "Elliott"
+  ]
+ },
+ {
+  "name": "Crayfish",
+  "source": "vanilla",
+  "category": "crab-pot",
+  "price": 75,
+  "locations": [
+   {
+    "place": "Rivers and lakes",
+    "detail": "crab pot",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": null,
+  "behavior": null,
+  "image": "https://stardewvalleywiki.com/mediawiki/images/5/53/Crayfish.png",
+  "wiki": "https://stardewvalleywiki.com/Crayfish",
+  "notes": "Caught with Crab Pot; must be crab-pot caught to count for collection.",
+  "recipes": [
+   "Fish Stew"
+  ],
+  "lovedBy": []
+ },
+ {
+  "name": "Crab",
+  "source": "vanilla",
+  "category": "crab-pot",
+  "price": 100,
+  "locations": [
+   {
+    "place": "Beach",
+    "detail": "crab pot",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": null,
+  "behavior": null,
+  "image": "https://stardewvalleywiki.com/mediawiki/images/6/63/Crab.png",
+  "wiki": "https://stardewvalleywiki.com/Crab",
+  "notes": "Caught with Crab Pot; must be crab-pot caught to count for collection.",
+  "recipes": [
+   "Crab Cakes"
+  ],
+  "lovedBy": []
+ },
+ {
+  "name": "Cockle",
+  "source": "vanilla",
+  "category": "crab-pot",
+  "price": 50,
+  "locations": [
+   {
+    "place": "Beach",
+    "detail": "crab pot",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": null,
+  "behavior": null,
+  "image": "https://stardewvalleywiki.com/mediawiki/images/a/ad/Cockle.png",
+  "wiki": "https://stardewvalleywiki.com/Cockle",
+  "notes": "Caught with Crab Pot; must be crab-pot caught to count for collection.",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Mussel",
+  "source": "vanilla",
+  "category": "crab-pot",
+  "price": 30,
+  "locations": [
+   {
+    "place": "Beach",
+    "detail": "crab pot",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": null,
+  "behavior": null,
+  "image": "https://stardewvalleywiki.com/mediawiki/images/a/aa/Mussel.png",
+  "wiki": "https://stardewvalleywiki.com/Mussel",
+  "notes": "Caught with Crab Pot; must be crab-pot caught to count for collection.",
+  "recipes": [
+   "Fish Stew"
+  ],
+  "lovedBy": []
+ },
+ {
+  "name": "Shrimp",
+  "source": "vanilla",
+  "category": "crab-pot",
+  "price": 60,
+  "locations": [
+   {
+    "place": "Beach",
+    "detail": "crab pot",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": null,
+  "behavior": null,
+  "image": "https://stardewvalleywiki.com/mediawiki/images/9/91/Shrimp.png",
+  "wiki": "https://stardewvalleywiki.com/Shrimp",
+  "notes": "Caught with Crab Pot; must be crab-pot caught to count for collection.",
+  "recipes": [
+   "Tom Kha Soup",
+   "Shrimp Cocktail"
+  ],
+  "lovedBy": []
+ },
+ {
+  "name": "Snail",
+  "source": "vanilla",
+  "category": "crab-pot",
+  "price": 65,
+  "locations": [
+   {
+    "place": "Rivers and lakes",
+    "detail": "crab pot",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": null,
+  "behavior": null,
+  "image": "https://stardewvalleywiki.com/mediawiki/images/d/d2/Snail.png",
+  "wiki": "https://stardewvalleywiki.com/Snail",
+  "notes": "Caught with Crab Pot; must be crab-pot caught to count for collection.",
+  "recipes": [
+   "Escargot"
+  ],
+  "lovedBy": [
+   "Vincent"
+  ]
+ },
+ {
+  "name": "Periwinkle",
+  "source": "vanilla",
+  "category": "crab-pot",
+  "price": 20,
+  "locations": [
+   {
+    "place": "Rivers and lakes",
+    "detail": "crab pot",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": null,
+  "behavior": null,
+  "image": "https://stardewvalleywiki.com/mediawiki/images/1/1d/Periwinkle.png",
+  "wiki": "https://stardewvalleywiki.com/Periwinkle",
+  "notes": "Caught with Crab Pot; must be crab-pot caught to count for collection.",
+  "recipes": [
+   "Strange Bun",
+   "Fish Stew"
+  ],
+  "lovedBy": []
+ },
+ {
+  "name": "Oyster",
+  "source": "vanilla",
+  "category": "crab-pot",
+  "price": 40,
+  "locations": [
+   {
+    "place": "Beach",
+    "detail": "crab pot",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": null,
+  "behavior": null,
+  "image": "https://stardewvalleywiki.com/mediawiki/images/5/54/Oyster.png",
+  "wiki": "https://stardewvalleywiki.com/Oyster",
+  "notes": "Caught with Crab Pot; must be crab-pot caught to count for collection.",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Seaweed",
+  "source": "vanilla",
+  "category": "other",
+  "price": 20,
+  "locations": [
+   {
+    "place": "Beach",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Beach",
+    "detail": "foraged on the sand",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Blue Moon Vineyard",
+    "detail": "ocean",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": null,
+  "behavior": null,
+  "image": "https://stardewvalleywiki.com/mediawiki/images/1/13/Seaweed.png",
+  "wiki": "https://stardewvalleywiki.com/Seaweed",
+  "notes": "Not a fish (no minigame) but counts in the Fish collection.",
+  "recipes": [
+   "Maki Roll"
+  ],
+  "lovedBy": []
+ },
+ {
+  "name": "Green Algae",
+  "source": "vanilla",
+  "category": "other",
+  "price": 15,
+  "locations": [
+   {
+    "place": "Anywhere",
+    "detail": "not the Standard Farm pond or the ocean",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Blue Moon Vineyard",
+    "detail": "river",
+    "sve": true,
+    "spoiler": false
+   },
+   {
+    "place": "Shearwater Bridge",
+    "detail": "Winter only",
+    "sve": true,
+    "spoiler": false
+   },
+   {
+    "place": "Adventurer Summit",
+    "detail": "",
+    "sve": true,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": null,
+  "behavior": null,
+  "image": "https://stardewvalleywiki.com/mediawiki/images/6/6d/Green_Algae.png",
+  "wiki": "https://stardewvalleywiki.com/Green_Algae",
+  "notes": "Not a fish (no minigame) but counts in the Fish collection.",
+  "recipes": [
+   "Algae Soup",
+   "Trout Soup"
+  ],
+  "lovedBy": []
+ },
+ {
+  "name": "White Algae",
+  "source": "vanilla",
+  "category": "other",
+  "price": 25,
+  "locations": [
+   {
+    "place": "Mines",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Sewers",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Mutant Bug Lair",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Witch's Swamp",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": null,
+  "behavior": null,
+  "image": "https://stardewvalleywiki.com/mediawiki/images/f/f7/White_Algae.png",
+  "wiki": "https://stardewvalleywiki.com/White_Algae",
+  "notes": "Not a fish (no minigame) but counts in the Fish collection.",
+  "recipes": [
+   "Pale Broth"
+  ],
+  "lovedBy": []
+ },
+ {
+  "name": "Sea Jelly",
+  "source": "vanilla",
+  "category": "other",
+  "price": 200,
+  "locations": [
+   {
+    "place": "Beach",
+    "detail": "any ocean",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": null,
+  "behavior": null,
+  "image": "https://stardewvalleywiki.com/mediawiki/images/d/d5/Sea_Jelly.png",
+  "wiki": "https://stardewvalleywiki.com/Sea_Jelly",
+  "notes": "Not a fish (no minigame) but counts in the Fish collection.",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "River Jelly",
+  "source": "vanilla",
+  "category": "other",
+  "price": 125,
+  "locations": [
+   {
+    "place": "Rivers and lakes",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": null,
+  "behavior": null,
+  "image": "https://stardewvalleywiki.com/mediawiki/images/8/80/River_Jelly.png",
+  "wiki": "https://stardewvalleywiki.com/River_Jelly",
+  "notes": "Not a fish (no minigame) but counts in the Fish collection.",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Cave Jelly",
+  "source": "vanilla",
+  "category": "other",
+  "price": 180,
+  "locations": [
+   {
+    "place": "Mines",
+    "detail": "floors 20, 60 and 100",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": null,
+  "behavior": null,
+  "image": "https://stardewvalleywiki.com/mediawiki/images/0/0a/Cave_Jelly.png",
+  "wiki": "https://stardewvalleywiki.com/Cave_Jelly",
+  "notes": "Not a fish (no minigame) but counts in the Fish collection.",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Baby Lunaloo",
+  "source": "sve",
+  "category": "fish",
+  "price": 45,
+  "locations": [
+   {
+    "place": "Ginger Island",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    17,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 40,
+  "behavior": "sinker",
+  "image": "https://static.wikia.nocookie.net/stardew-valley-expanded/images/b/b2/Baby_Lunaloo.png/revision/latest",
+  "wiki": "https://stardew-valley-expanded.fandom.com/wiki/Baby_Lunaloo",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Bonefish",
+  "source": "sve",
+  "category": "fish",
+  "price": 200,
+  "locations": [
+   {
+    "place": "Crimson Badlands",
+    "detail": "",
+    "sve": false,
+    "spoiler": true
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 5,
+  "difficulty": 70,
+  "behavior": "sinker",
+  "image": "https://static.wikia.nocookie.net/stardew-valley-expanded/images/f/f4/Bonefish.png/revision/latest",
+  "wiki": "https://stardew-valley-expanded.fandom.com/wiki/Bonefish",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Butterfish",
+  "source": "sve",
+  "category": "fish",
+  "price": 225,
+  "locations": [
+   {
+    "place": "Forest West",
+    "detail": "Summer only",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Shearwater Bridge",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall"
+  ],
+  "seasonNote": "Forest West: Summer only",
+  "time": [
+   [
+    6,
+    14
+   ]
+  ],
+  "weather": "sun",
+  "minLevel": 8,
+  "difficulty": 75,
+  "behavior": "dart",
+  "image": "https://static.wikia.nocookie.net/stardew-valley-expanded/images/a/a5/Butterfish.png/revision/latest",
+  "wiki": "https://stardew-valley-expanded.fandom.com/wiki/Butterfish",
+  "notes": "",
+  "recipes": [
+   "Glazed Butterfish"
+  ],
+  "lovedBy": [
+   "Andy",
+   "Gus",
+   "Victor",
+   "Willy"
+  ]
+ },
+ {
+  "name": "Clownfish",
+  "source": "sve",
+  "category": "fish",
+  "price": 90,
+  "locations": [
+   {
+    "place": "Ginger Island",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    10,
+    17
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 3,
+  "difficulty": 4,
+  "behavior": "dart",
+  "image": "https://static.wikia.nocookie.net/stardew-valley-expanded/images/c/ca/Clownfish.png/revision/latest",
+  "wiki": "https://stardew-valley-expanded.fandom.com/wiki/Clownfish",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Daggerfish",
+  "source": "sve",
+  "category": "fish",
+  "price": 250,
+  "locations": [
+   {
+    "place": "Highland Ruins",
+    "detail": "",
+    "sve": false,
+    "spoiler": true
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 50,
+  "behavior": "dart",
+  "image": "https://static.wikia.nocookie.net/stardew-valley-expanded/images/4/4a/Daggerfish.png/revision/latest",
+  "wiki": "https://stardew-valley-expanded.fandom.com/wiki/Daggerfish",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": [
+   "Lance",
+   "Marlon"
+  ]
+ },
+ {
+  "name": "Frog",
+  "source": "sve",
+  "category": "fish",
+  "price": 100,
+  "locations": [
+   {
+    "place": "Mountain Lake",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    18,
+    26
+   ]
+  ],
+  "weather": "rain",
+  "minLevel": 5,
+  "difficulty": 70,
+  "behavior": "sinker",
+  "image": "https://static.wikia.nocookie.net/stardew-valley-expanded/images/e/e6/Frog.png/revision/latest",
+  "wiki": "https://stardew-valley-expanded.fandom.com/wiki/Frog",
+  "notes": "",
+  "recipes": [
+   "Frog Legs"
+  ],
+  "lovedBy": [
+   "Morgan",
+   "Abigail",
+   "Sebastian",
+   "Vincent"
+  ]
+ },
+ {
+  "name": "Gemfish",
+  "source": "sve",
+  "category": "fish",
+  "price": 1200,
+  "locations": [
+   {
+    "place": "Highlands Cavern",
+    "detail": "",
+    "sve": false,
+    "spoiler": true
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 100,
+  "behavior": "sinker",
+  "image": "https://static.wikia.nocookie.net/stardew-valley-expanded/images/b/b1/Gemfish.png/revision/latest",
+  "wiki": "https://stardew-valley-expanded.fandom.com/wiki/Gemfish",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": [
+   "Dwarf",
+   "Lance"
+  ]
+ },
+ {
+  "name": "Goldenfish",
+  "source": "sve",
+  "category": "fish",
+  "price": 150,
+  "locations": [
+   {
+    "place": "Sprite Spring",
+    "detail": "",
+    "sve": false,
+    "spoiler": true
+   },
+   {
+    "place": "Junimo Woods",
+    "detail": "",
+    "sve": false,
+    "spoiler": true
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 60,
+  "behavior": "mixed",
+  "image": "https://static.wikia.nocookie.net/stardew-valley-expanded/images/c/c1/Goldenfish.png/revision/latest",
+  "wiki": "https://stardew-valley-expanded.fandom.com/wiki/Glowfish",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": [
+   "Marlon"
+  ]
+ },
+ {
+  "name": "King Salmon",
+  "source": "sve",
+  "category": "fish",
+  "price": 450,
+  "locations": [
+   {
+    "place": "Forest West",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    20
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 8,
+  "difficulty": 80,
+  "behavior": "dart",
+  "image": "https://static.wikia.nocookie.net/stardew-valley-expanded/images/f/f8/King_Salmon.png/revision/latest",
+  "wiki": "https://stardew-valley-expanded.fandom.com/wiki/King_Salmon",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Kittyfish",
+  "source": "sve",
+  "category": "fish",
+  "price": 280,
+  "locations": [
+   {
+    "place": "Shearwater Bridge",
+    "detail": "after a story event",
+    "sve": false,
+    "spoiler": true
+   }
+  ],
+  "seasons": [
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    14
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 8,
+  "difficulty": 85,
+  "behavior": "mixed",
+  "image": "https://static.wikia.nocookie.net/stardew-valley-expanded/images/f/fc/Kittyfish.png/revision/latest",
+  "wiki": "https://stardew-valley-expanded.fandom.com/wiki/Kittyfish",
+  "notes": "Event required",
+  "recipes": [],
+  "lovedBy": [
+   "Morgan"
+  ]
+ },
+ {
+  "name": "Lunaloo",
+  "source": "sve",
+  "category": "fish",
+  "price": 110,
+  "locations": [
+   {
+    "place": "Ginger Island",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    17,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 5,
+  "difficulty": 70,
+  "behavior": "dart",
+  "image": "https://static.wikia.nocookie.net/stardew-valley-expanded/images/2/2f/Lunaloo.png/revision/latest",
+  "wiki": "https://stardew-valley-expanded.fandom.com/wiki/Lunaloo",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Meteor Carp",
+  "source": "sve",
+  "category": "fish",
+  "price": 300,
+  "locations": [
+   {
+    "place": "Sprite Spring",
+    "detail": "",
+    "sve": false,
+    "spoiler": true
+   },
+   {
+    "place": "Junimo Woods",
+    "detail": "",
+    "sve": false,
+    "spoiler": true
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 80,
+  "behavior": "sinker",
+  "image": "https://static.wikia.nocookie.net/stardew-valley-expanded/images/e/e7/Meteor_Carp.png/revision/latest",
+  "wiki": "https://stardew-valley-expanded.fandom.com/wiki/Meteor_Carp",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": [
+   "Krobus"
+  ]
+ },
+ {
+  "name": "Minnow",
+  "source": "sve",
+  "category": "fish",
+  "price": 20,
+  "locations": [
+   {
+    "place": "Farm",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Town",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Cindersap Forest",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Mountain Lake",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Blue Moon Vineyard",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Shearwater Bridge",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Adventurer Summit",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "Winter: not at Farm or Adventurer Summit",
+  "time": [
+   [
+    6,
+    18
+   ]
+  ],
+  "weather": "sun",
+  "minLevel": 0,
+  "difficulty": 1,
+  "behavior": "sinker",
+  "image": "https://static.wikia.nocookie.net/stardew-valley-expanded/images/8/8e/Minnow.png/revision/latest",
+  "wiki": "https://stardew-valley-expanded.fandom.com/wiki/Minnow",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Puppyfish",
+  "source": "sve",
+  "category": "fish",
+  "price": 280,
+  "locations": [
+   {
+    "place": "Forest West",
+    "detail": "Summer only",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Shearwater Bridge",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall"
+  ],
+  "seasonNote": "Forest West: Summer only",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 8,
+  "difficulty": 85,
+  "behavior": "mixed",
+  "image": "https://static.wikia.nocookie.net/stardew-valley-expanded/images/2/21/Puppyfish.png/revision/latest",
+  "wiki": "https://stardew-valley-expanded.fandom.com/wiki/Puppyfish",
+  "notes": "",
+  "recipes": [
+   "Big Bark Burger"
+  ],
+  "lovedBy": [
+   "Sophia"
+  ]
+ },
+ {
+  "name": "Radioactive Bass",
+  "source": "sve",
+  "category": "fish",
+  "price": 900,
+  "locations": [
+   {
+    "place": "Sewers",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 10,
+  "difficulty": 90,
+  "behavior": "floater",
+  "image": "https://static.wikia.nocookie.net/stardew-valley-expanded/images/4/44/Radioactive_Bass.png/revision/latest",
+  "wiki": "https://stardew-valley-expanded.fandom.com/wiki/Radioactive_Bass",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Razor Trout",
+  "source": "sve",
+  "category": "fish",
+  "price": 400,
+  "locations": [
+   {
+    "place": "Town",
+    "detail": "Joja route only",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 10,
+  "difficulty": 85,
+  "behavior": "dart",
+  "image": "https://static.wikia.nocookie.net/stardew-valley-expanded/images/8/86/Razor_Trout.png/revision/latest",
+  "wiki": "https://stardew-valley-expanded.fandom.com/wiki/Razor_Trout",
+  "notes": "Joja only, not included in Perfection Tracker",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Sea Sponge",
+  "source": "sve",
+  "category": "fish",
+  "price": 90,
+  "locations": [
+   {
+    "place": "Ginger Island",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    14
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 40,
+  "behavior": "sinker",
+  "image": "https://static.wikia.nocookie.net/stardew-valley-expanded/images/f/f3/Sea_Sponge.png/revision/latest",
+  "wiki": "https://stardew-valley-expanded.fandom.com/wiki/Sea_Sponge",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Seahorse",
+  "source": "sve",
+  "category": "fish",
+  "price": 80,
+  "locations": [
+   {
+    "place": "Ginger Island",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    8,
+    17
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 25,
+  "behavior": "mixed",
+  "image": "https://static.wikia.nocookie.net/stardew-valley-expanded/images/6/6e/Seahorse.png/revision/latest",
+  "wiki": "https://stardew-valley-expanded.fandom.com/wiki/Seahorse",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Shiny Lunaloo",
+  "source": "sve",
+  "category": "fish",
+  "price": 850,
+  "locations": [
+   {
+    "place": "Ginger Island",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    17,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 8,
+  "difficulty": 110,
+  "behavior": "floater",
+  "image": "https://static.wikia.nocookie.net/stardew-valley-expanded/images/b/b0/Shiny_Lunaloo.png/revision/latest",
+  "wiki": "https://stardew-valley-expanded.fandom.com/wiki/Shiny_Lunaloo",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": [
+   "Magnus"
+  ]
+ },
+ {
+  "name": "Starfish",
+  "source": "sve",
+  "category": "fish",
+  "price": 120,
+  "locations": [
+   {
+    "place": "Beach",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Ginger Island",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "Beach: not in Winter; Ginger Island: all seasons",
+  "time": [
+   [
+    6,
+    22
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 5,
+  "difficulty": 75,
+  "behavior": "sinker",
+  "image": "https://static.wikia.nocookie.net/stardew-valley-expanded/images/5/52/Starfish.png/revision/latest",
+  "wiki": "https://stardew-valley-expanded.fandom.com/wiki/Starfish",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Torpedo Trout",
+  "source": "sve",
+  "category": "fish",
+  "price": 575,
+  "locations": [
+   {
+    "place": "Fable Reef",
+    "detail": "",
+    "sve": false,
+    "spoiler": true
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 0,
+  "difficulty": 70,
+  "behavior": "dart",
+  "image": "https://static.wikia.nocookie.net/stardew-valley-expanded/images/0/0a/Torpedo_Trout.png/revision/latest",
+  "wiki": "https://stardew-valley-expanded.fandom.com/wiki/Torpedo_Trout",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": [
+   "Lance"
+  ]
+ },
+ {
+  "name": "Undeadfish",
+  "source": "sve",
+  "category": "fish",
+  "price": 200,
+  "locations": [
+   {
+    "place": "Crimson Badlands",
+    "detail": "",
+    "sve": false,
+    "spoiler": true
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 5,
+  "difficulty": 80,
+  "behavior": "mixed",
+  "image": "https://static.wikia.nocookie.net/stardew-valley-expanded/images/9/99/Undeadfish.png/revision/latest",
+  "wiki": "https://stardew-valley-expanded.fandom.com/wiki/Undeadfish",
+  "notes": "",
+  "recipes": [],
+  "lovedBy": []
+ },
+ {
+  "name": "Void Eel",
+  "source": "sve",
+  "category": "fish",
+  "price": 650,
+  "locations": [
+   {
+    "place": "Mutant Bug Lair",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   },
+   {
+    "place": "Witch's Swamp",
+    "detail": "",
+    "sve": false,
+    "spoiler": false
+   }
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "seasonNote": "",
+  "time": [
+   [
+    6,
+    26
+   ]
+  ],
+  "weather": "any",
+  "minLevel": 8,
+  "difficulty": 100,
+  "behavior": "mixed",
+  "image": "https://static.wikia.nocookie.net/stardew-valley-expanded/images/e/e1/Void_Eel.png/revision/latest",
+  "wiki": "https://stardew-valley-expanded.fandom.com/wiki/Void_Eel",
+  "notes": "",
+  "recipes": [
+   "Void Delight"
+  ],
+  "lovedBy": []
+ }
+]

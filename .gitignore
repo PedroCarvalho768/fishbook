@@ -1,0 +1,8 @@
+# local only: your save copy, raw game/mod data dumps, research scratch
+data/research/
+data/img/
+*.csv
+node_modules/
+__pycache__/
+.shots/
+.impeccable/

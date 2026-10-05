@@ -1,0 +1,93 @@
+/* ---------- Fish view ---------- */
+.fish-now { margin: -4px 0 8px; }
+.now-btn {
+  border: 1px solid var(--line-soft); background: var(--bg-2); border-radius: var(--r-lg); padding: 12px 16px; width: 100%;
+  display: flex; align-items: center; text-align: left; gap: 14px;
+  transition: background .18s var(--ease), border-color .18s var(--ease);
+}
+.now-btn:hover { background: var(--now-dim); }
+.now-btn[aria-pressed="true"] { background: var(--now-dim); border-color: oklch(0.82 0.12 180 / .4); }
+.now-btn .n { font-size: var(--text-2xl); font-weight: 800; letter-spacing: -0.03em; color: var(--now); line-height: 1; }
+.now-btn .t { font-size: var(--text-sm); color: var(--ink-2); }
+.now-btn .cta { display: block; margin-top: 3px; color: var(--now); font-weight: 700; font-size: var(--text-xs); }
+
+.active-filters { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 0 0 10px; font-size: var(--text-sm); color: var(--ink-3); }
+.active-filters:empty { display: none; }
+.pill-x { display: inline-flex; align-items: center; gap: 4px; border: 1px solid var(--line); background: var(--surface); color: var(--ink-2); border-radius: 99px; padding: 3px 6px 3px 10px; font-size: var(--text-xs); font-weight: 600; }
+.pill-x svg { width: 14px; height: 14px; }
+.pill-x:hover { color: var(--ink); border-color: var(--ink-3); }
+
+.fish-cols, .fish-row {
+  display: grid;
+  grid-template-columns: 44px 52px minmax(180px, 1.6fr) 96px minmax(150px, 1fr) 54px 92px 64px;
+  align-items: center; column-gap: 14px;
+}
+.fish-cols { padding: 0 14px 8px; font-size: var(--text-xs); font-weight: 600; color: var(--ink-3); border-bottom: 1px solid var(--line-soft); }
+.fish-cols > * { white-space: nowrap; }
+.fish-cols .r { text-align: right; justify-self: end; }
+.sort-btn { border: 0; background: none; padding: 2px 0; font-size: inherit; font-weight: inherit; color: inherit; }
+.sort-btn:hover { color: var(--ink); }
+.sort-btn[aria-pressed="true"] { color: var(--honey); }
+
+.fish-list { list-style: none; margin: 0; padding: 0; }
+.fish { border-bottom: 1px solid var(--line-soft); }
+.fish-row { padding: 10px 14px; border-radius: var(--r); position: relative; transition: background .15s var(--ease); }
+.fish-row:hover, .fish:focus-within > .fish-row { background: var(--bg-2); }
+.fish.open > .fish-row { background: var(--surface); border-radius: var(--r) var(--r) 0 0; }
+.fish-row:hover .sprite, .fish.open .sprite { background: var(--surface-2); }
+.fish.caught .sprite img { filter: drop-shadow(0 0 6px oklch(0.8 0.155 70 / .35)); }
+
+.name-cell { min-width: 0; }
+.name-btn { border: 0; background: none; padding: 0; text-align: left; display: inline-flex; align-items: center; gap: 8px; max-width: 100%; font-size: var(--text-md); font-weight: 700; letter-spacing: -0.01em; color: var(--ink); }
+.name-btn::after { content: ""; position: absolute; inset: 0; border-radius: var(--r); }
+.name-btn:focus-visible { outline: none; }
+.name-btn:focus-visible::after { outline: 2px solid var(--honey); outline-offset: -2px; }
+.name-btn .nm { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.locs { margin-top: 2px; font-size: var(--text-sm); color: var(--ink-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.locs .sep, .sub .sep { color: var(--ink-3); margin: 0 5px; }
+.name-cell .status { margin-top: 4px; }
+
+.fish-seasons span { width: 22px; height: 22px; }
+.fish-seasons span svg { width: 13px; height: 13px; }
+
+.timebar { position: relative; height: 22px; }
+.timebar .tb-rail { position: absolute; left: 0; right: 0; top: 8px; height: 6px; border-radius: 99px; background: var(--surface-2); overflow: hidden; }
+.timebar .seg-t { position: absolute; top: 0; bottom: 0; background: var(--ink-3); border-radius: 99px; }
+.fish.st-now .timebar .seg-t { background: var(--now); }
+.fish.st-later .timebar .seg-t, .fish.st-leaving .timebar .seg-t { background: var(--ink-2); }
+.fish.caught .timebar .seg-t { background: oklch(0.8 0.155 70 / .55); }
+.timebar .mark { position: absolute; top: 3px; bottom: 3px; width: 2px; margin-left: -1px; background: var(--ink); border-radius: 2px; box-shadow: 0 0 0 2px var(--bg); transition: left .25s var(--ease); }
+.fish-row:hover .timebar .mark, .fish.open .timebar .mark { box-shadow: 0 0 0 2px var(--bg-2); }
+.time-txt { font-size: var(--text-xs); color: var(--ink-3); font-variant-numeric: tabular-nums; margin-top: -2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.wx { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 9px; color: var(--ink-3); }
+.wx svg { width: 20px; height: 20px; }
+.wx.sun { color: var(--summer); background: oklch(0.87 0.15 98 / .1); }
+.wx.rain { color: var(--rain); background: oklch(0.76 0.11 245 / .12); }
+.wx.mismatch { opacity: .45; }
+
+.diff { display: flex; flex-direction: column; gap: 4px; }
+.diff .v { display: flex; justify-content: space-between; font-size: var(--text-xs); font-weight: 600; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.diff .v b { color: var(--ink); font-weight: 700; }
+.diff .meter { height: 4px; border-radius: 99px; background: var(--surface-2); overflow: hidden; }
+.diff .meter i { display: block; height: 100%; border-radius: inherit; background: var(--dc); }
+.price { text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--ink); }
+.price small { color: var(--honey); font-weight: 700; margin-left: 1px; }
+.fish-detail { padding-left: calc(14px + 44px + 14px + 52px + 14px); }
+.fish.leaving-out { animation: leave .45s var(--ease) forwards; }
+
+@media (max-width: 1360px) {
+  .fish-cols, .fish-row { grid-template-columns: 44px 52px minmax(160px, 1.6fr) 96px minmax(120px, 1fr) 44px 64px; }
+  .col-diff, .fish-row .diff { display: none; }
+}
+@media (max-width: 760px) {
+  .fish-cols { display: none; }
+  .fish-row { grid-template-columns: 40px 48px minmax(0, 1fr) auto; grid-template-areas: "c s n p" "c s t t"; row-gap: 6px; padding: 10px 6px; }
+  .fish-row .catch { grid-area: c; align-self: start; margin-top: 6px; }
+  .fish-row .sprite { grid-area: s; align-self: start; }
+  .fish-row .name-cell { grid-area: n; }
+  .fish-row .price { grid-area: p; align-self: start; padding-top: 2px; }
+  .fish-row .fish-seasons, .fish-row .wx { display: none; }
+  .fish-row .time-cell { grid-area: t; }
+  .fish-detail { padding: 4px 12px 16px; }
+}

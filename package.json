@@ -1,0 +1,12 @@
+{
+  "name": "fishbook",
+  "private": true,
+  "description": "Stardew Valley Expanded perfection tracker",
+  "scripts": {
+    "build": "python tools/build_db.py && python build.py",
+    "test": "python -m unittest discover -s tests -p \"test_*.py\" && node tests/e2e.mjs"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.56.0"
+  }
+}
