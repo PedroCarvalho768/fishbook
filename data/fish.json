@@ -1279,7 +1279,7 @@
    ]
   ],
   "weather": "any",
-  "minLevel": 0,
+  "minLevel": 3,
   "difficulty": 65,
   "behavior": "sinker",
   "image": "https://stardewvalleywiki.com/mediawiki/images/0/03/Stonefish.png",
@@ -1315,7 +1315,7 @@
    ]
   ],
   "weather": "any",
-  "minLevel": 0,
+  "minLevel": 5,
   "difficulty": 85,
   "behavior": "dart",
   "image": "https://stardewvalleywiki.com/mediawiki/images/6/63/Ice_Pip.png",
@@ -1357,7 +1357,7 @@
    ]
   ],
   "weather": "any",
-  "minLevel": 0,
+  "minLevel": 7,
   "difficulty": 90,
   "behavior": "mixed",
   "image": "https://stardewvalleywiki.com/mediawiki/images/1/12/Lava_Eel.png",
@@ -2534,7 +2534,7 @@
    ]
   ],
   "weather": "any",
-  "minLevel": 6,
+  "minLevel": 7,
   "difficulty": 100,
   "behavior": "mixed",
   "image": "https://stardewvalleywiki.com/mediawiki/images/f/fd/Glacierfish.png",
@@ -2714,7 +2714,7 @@
    ]
   ],
   "weather": "any",
-  "minLevel": 6,
+  "minLevel": 7,
   "difficulty": 100,
   "behavior": "mixed",
   "image": "https://stardewvalleywiki.com/mediawiki/images/d/db/Glacierfish_Jr..png",

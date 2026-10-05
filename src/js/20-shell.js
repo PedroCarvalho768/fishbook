@@ -6,19 +6,48 @@ let currentRoute = null;
 function route() { return (location.hash.replace(/^#\/?/, "").split("?")[0]) || ""; }
 function routeParam(key) { const q = location.hash.split("?")[1]; return q ? new URLSearchParams(q).get(key) : null; }
 
+const PAGE_TITLE = Object.fromEntries(NAV.flatMap(g => g.items).map(it => [it.route, it.label]));
 function renderView(keepScroll = false) {
   const r = route();
-  const v = VIEWS[r] || VIEWS[""];
+  const v = VIEWS[r] || VIEWS.__notfound;
   // swap in a fresh container so listeners from the previous view don't pile up
   const old = $("#view");
   const el = old.cloneNode(false);
   old.replaceWith(el);
   const y = scrollY;
-  v.render(el);
+  try {
+    v.render(el);
+  } catch (e) {
+    console.error(e);
+    el.innerHTML = errorScreen();
+  }
   currentRoute = r;
+  document.title = `${VIEWS[r] ? PAGE_TITLE[r] || "Fishbook" : "Page not found"} · Fishbook`;
   renderNav();
   if (keepScroll) scrollTo(0, y);
 }
+function errorScreen() {
+  return `<div class="empty">${icon("info", "art i")}<h1>This page hit a problem</h1>
+    <p>Your progress is safe; it's saved separately. Reload to try again, or go back to the overview.</p>
+    <div class="row"><button class="primary-btn" type="button" data-act="reload">${icon("refresh")}Reload</button><a class="ghost-btn" href="#/">Back to Perfection</a></div></div>`;
+}
+VIEWS.__notfound = {
+  render(el) {
+    el.innerHTML = `<div class="empty">${icon("search", "art i")}<h1>Page not found</h1>
+      <p>There's no page at <code>${esc(location.hash || "/")}</code>. It may have been renamed.</p>
+      <div class="row"><a class="primary-btn" href="#/">${icon("home")}Back to Perfection</a><button class="ghost-btn" type="button" data-act="palette">${icon("search")}Search everything</button></div></div>`;
+  },
+};
+// last-resort net for errors outside a view's render: tell the user instead of failing silently
+let lastErrorToast = 0;
+function reportCrash(e) {
+  console.error(e);
+  if (Date.now() - lastErrorToast < 4000) return;
+  lastErrorToast = Date.now();
+  toast("Something went wrong. Your progress is saved; reloading usually fixes it.", null, 6000);
+}
+addEventListener("error", e => { if (e.target === window) reportCrash(e.error || e.message); });
+addEventListener("unhandledrejection", e => reportCrash(e.reason));
 
 addEventListener("hashchange", () => {
   closeRail();
@@ -181,6 +210,8 @@ $("#settings-btn").addEventListener("click", () => {
         <button class="ghost-btn danger" type="button" data-act="clear-manual" ${manualCount ? "" : "disabled"}>${icon("reset")}Clear</button></div>
       <div class="set-row"><div><b>Loaded save</b><span>${state.save ? `${esc(state.save.farmer)}, ${esc(state.save.farm)} Farm` : "No save loaded."}</span></div>
         <button class="ghost-btn danger" type="button" data-act="forget-save" ${state.save ? "" : "disabled"}>${icon("x")}Forget</button></div>
+      <div class="set-row"><div><b>Delete all Fishbook data</b><span>Removes your loaded save, manual ticks, settings and live-sync link from this browser.</span></div>
+        <button class="ghost-btn danger" type="button" data-act="wipe">${icon("x")}Delete…</button></div>
       <div class="set-row"><div><b>Keyboard shortcuts</b><span>Press <span class="kbd">?</span> anywhere.</span></div><button class="ghost-btn" type="button" data-act="keys">${icon("keyboard")}Show</button></div>
     </div>
     <p class="faint" style="font-size:var(--text-xs);margin:16px 0 0">Data: Stardew Valley ${esc(DB.meta.gameVersion)} and Stardew Valley Expanded ${esc(DB.meta.sveVersion)} game files, plus the official wikis. Built ${esc(DB.meta.built)}.</p>
@@ -204,6 +235,24 @@ function showKeys() {
     <form method="dialog" class="dlg-actions"><button class="primary-btn">Done</button></form>`);
 }
 
+/* ---------- delete everything ---------- */
+let wipeArmed = 0;
+async function wipeAll(e) {
+  const btn = e?.target?.closest?.("[data-act=wipe]");
+  if (Date.now() - wipeArmed > 4000) {
+    wipeArmed = Date.now();
+    if (btn) btn.innerHTML = `${icon("x")}Click again to delete`;
+    return;
+  }
+  clearTimeout(saveTimer);
+  localStorage.removeItem(STORE_KEY);
+  localStorage.removeItem(LEGACY_KEY);
+  try { await stopSync(); indexedDB.deleteDatabase("fishbook-sync"); } catch {}
+  try { for (const k of await caches.keys()) await caches.delete(k); } catch {}
+  location.hash = "#/";
+  location.reload();
+}
+
 /* ---------- export / import ---------- */
 function exportProgress() {
   const data = { app: "fishbook", version: 2, exported: new Date().toISOString(), state: { ...state, prevSave: null } };
@@ -216,9 +265,19 @@ function exportProgress() {
 async function importProgress(file) {
   try {
     const data = JSON.parse(await file.text());
-    if (data.app === "fishbook" && data.state) {
+    if (data.app === "fishbook" && data.state && typeof data.state === "object") {
       const before = structuredClone(state);
-      state = { ...defaults, ...data.state }; persist(); fullRender();
+      const s = data.state, obj = v => v && typeof v === "object" && !Array.isArray(v);
+      state = {
+        ...structuredClone(defaults),
+        season: SEASONS.includes(s.season) ? s.season : defaults.season,
+        day: clamp(+s.day || 1, 1, 28), year: Math.max(1, +s.year || 1),
+        weather: s.weather === "rain" ? "rain" : "sun", time: clamp(+s.time || 0, 0, 1200),
+        spoilers: s.spoilers === "shown" ? "shown" : "hidden",
+        manual: obj(s.manual) ? s.manual : {}, ui: obj(s.ui) ? s.ui : {},
+        save: obj(s.save) ? s.save : null, changes: null,
+      };
+      persist(); applyModRecipes(); fullRender();
       toast("Progress restored", () => { state = before; persist(); fullRender(); });
       return;
     }
@@ -249,6 +308,9 @@ document.addEventListener("click", e => {
     "export": exportProgress,
     "import": () => $("#import-file").click(),
     "keys": showKeys,
+    "reload": () => location.reload(),
+    "palette": () => openPalette(),
+    "wipe": wipeAll,
     "clear-manual": () => {
       const before = state.manual; state.manual = {}; persist(); fullRender(); $("#dialog").close();
       toast("Manual changes cleared", () => { state.manual = before; persist(); fullRender(); });
@@ -258,7 +320,7 @@ document.addEventListener("click", e => {
       toast("Save forgotten", () => { state.save = before; persist(); fullRender(); });
     },
   };
-  if (actions[act]) { e.preventDefault(); actions[act](); }
+  if (actions[act]) { e.preventDefault(); actions[act](e); }
 });
 
 $("#import-file").addEventListener("change", e => { const f = e.target.files[0]; if (f) importProgress(f); e.target.value = ""; });

@@ -7,12 +7,14 @@ import base64
 import hashlib
 import concurrent.futures as cf
 import json
+import re
 import pathlib
 import subprocess
 import urllib.parse
 
 ROOT = pathlib.Path(__file__).parent
 SRC = ROOT / "src"
+DOMAIN = "sdve.rikode.com.br"  # GitHub Pages custom domain; also written to docs/CNAME
 IMG_DIR = ROOT / "data" / "img"
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36"
 
@@ -48,6 +50,27 @@ def sniff(data: bytes) -> str:
     return "image/png"
 
 
+def csp_meta(html: str) -> str:
+    """Strict Content Security Policy: the two inline scripts are allowed by hash, nothing else runs.
+    Inline style attributes stay allowed (the UI sets CSS variables per element)."""
+    scripts = re.findall(r"<script>(.*?)</script>", html, flags=re.S)
+    hashes = " ".join("'sha256-" + base64.b64encode(hashlib.sha256(s.encode("utf-8")).digest()).decode() + "'" for s in scripts)
+    policy = "; ".join([
+        "default-src 'none'",
+        f"script-src {hashes}",
+        "style-src 'unsafe-inline' https://fonts.googleapis.com",
+        "font-src https://fonts.gstatic.com",
+        "img-src data: blob:",
+        "connect-src 'self'",
+        "worker-src 'self'",
+        "manifest-src 'self'",
+        "base-uri 'none'",
+        "form-action 'none'",
+        "object-src 'none'",
+    ])
+    return f'<meta http-equiv="Content-Security-Policy" content="{policy}">'
+
+
 def main() -> None:
     IMG_DIR.mkdir(parents=True, exist_ok=True)
     db = json.loads((ROOT / "data" / "db.json").read_text(encoding="utf-8"))
@@ -78,14 +101,28 @@ def main() -> None:
     payload = json.dumps(db, ensure_ascii=False, separators=(",", ":")).replace("</", r"<\/")
     html = (SRC / "index.html").read_text(encoding="utf-8")
     html = html.replace("/*__CSS__*/", css).replace("/*__JS__*/", js).replace("/*__DB__*/{}", payload)
+    html = html.replace("<!--__CSP__-->", csp_meta(html))
     out = ROOT / "fishbook.html"
     out.write_text(html.replace("<!--__PWA__-->", ""), encoding="utf-8")
 
     # hostable site (GitHub Pages serves /docs): same app plus manifest, offline cache and icons
     site = ROOT / "docs"
     site.mkdir(exist_ok=True)
+    origin = "https://" + DOMAIN
     version = hashlib.sha1(html.encode("utf-8")).hexdigest()[:10]
-    pwa_head = '<link rel="manifest" href="manifest.webmanifest">\n<link rel="apple-touch-icon" href="icon-192.png">'
+    pwa_head = "\n".join([
+        '<link rel="manifest" href="manifest.webmanifest">',
+        '<link rel="apple-touch-icon" href="icon-192.png">',
+        '<meta property="og:type" content="website">',
+        '<meta property="og:title" content="Fishbook: Stardew Valley Expanded perfection tracker">',
+        '<meta property="og:description" content="Load your save and see what\'s left for Perfection in SVE: fish, shipping, recipes, friends, walnuts and more.">',
+        f'<link rel="canonical" href="{origin}/">',
+        f'<meta property="og:url" content="{origin}/">',
+        f'<meta property="og:image" content="{origin}/og.png">',
+        '<meta property="og:image:width" content="1200">',
+        '<meta property="og:image:height" content="630">',
+        '<meta name="twitter:card" content="summary_large_image">',
+    ])
     (site / "index.html").write_text(html.replace("<!--__PWA__-->", pwa_head), encoding="utf-8")
     for f in (SRC / "pwa").iterdir():
         if f.name == "sw.js":
@@ -93,6 +130,8 @@ def main() -> None:
         else:
             (site / f.name).write_bytes(f.read_bytes())
     (site / ".nojekyll").write_text("", encoding="utf-8")
+    (site / "robots.txt").write_text("User-agent: *\nAllow: /\n", encoding="utf-8")
+    (site / "CNAME").write_text(DOMAIN + "\n", encoding="utf-8")
     print(f"Built {out.name}: {out.stat().st_size // 1024} KB, {len(img)} sprites, {len(missing)} missing")
     if missing:
         print("  missing:", ", ".join(missing[:40]), "..." if len(missing) > 40 else "")

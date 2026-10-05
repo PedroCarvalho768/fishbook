@@ -382,7 +382,6 @@ async function loadSaveFile(file, opts = {}) {
       return;
     }
     toast(`${icon("check")}Loaded ${esc(extract.farmer)}'s farm · ${after.toFixed(1)}% perfection${sameFarm && n ? ` <span class="sub">· ${plural(n, "change")} since last time</span>` : ""}${extract.partial ? ` <span class="sub">· SaveGameInfo only: walnuts and buildings need the full save</span>` : ""}`, null, 7000);
-    console.info(`Save parsed in ${ms} ms`);
     if (route() !== "" && sameFarm && n) location.hash = "#/";
   } catch (e) {
     console.error(e);

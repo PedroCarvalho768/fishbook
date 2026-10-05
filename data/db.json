@@ -1607,7 +1607,7 @@
     ]
    ],
    "weather": "any",
-   "minLevel": 6,
+   "minLevel": 7,
    "difficulty": 100,
    "behavior": "mixed",
    "wiki": "https://stardewvalleywiki.com/Glacierfish",
@@ -1644,7 +1644,7 @@
     ]
    ],
    "weather": "any",
-   "minLevel": 6,
+   "minLevel": 7,
    "difficulty": 100,
    "behavior": "mixed",
    "wiki": "https://stardewvalleywiki.com/Glacierfish_Jr.",
@@ -2020,7 +2020,7 @@
     ]
    ],
    "weather": "any",
-   "minLevel": 0,
+   "minLevel": 5,
    "difficulty": 85,
    "behavior": "dart",
    "wiki": "https://stardewvalleywiki.com/Ice_Pip",
@@ -2186,7 +2186,7 @@
     ]
    ],
    "weather": "any",
-   "minLevel": 0,
+   "minLevel": 7,
    "difficulty": 90,
    "behavior": "mixed",
    "wiki": "https://stardewvalleywiki.com/Lava_Eel",
@@ -4466,7 +4466,7 @@
     ]
    ],
    "weather": "any",
-   "minLevel": 0,
+   "minLevel": 3,
    "difficulty": 65,
    "behavior": "sinker",
    "wiki": "https://stardewvalleywiki.com/Stonefish",

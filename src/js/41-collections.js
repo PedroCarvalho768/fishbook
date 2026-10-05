@@ -162,7 +162,7 @@ VIEWS.bundles = (() => {
     const complete = bundleDone(b);
     return `<article class="bundle${complete ? " complete" : ""}">
       <header><h3>${esc(b.name)}</h3><span class="num">${Math.min(filled, b.required)}/${b.required}</span></header>
-      <ul>${b.items.map(i => { const k = bundleItemKey(b, i); const on = isDone("bundles", k); return `<li><label class="bitem${on ? " on" : ""}"><input type="checkbox" data-bitem="${esc(k)}" data-bundle="${esc(b.id)}" ${on ? "checked" : ""}>${imgOf(i.id) ? `<img src="${imgOf(i.id)}" alt="">` : `<span class="dot"></span>`}<span>${i.qty > 1 ? `${i.qty}× ` : ""}${esc(i.name)}${i.quality ? ` <span class="faint">(${esc(i.quality)})</span>` : ""}</span>${!on && !complete && i.id && owned(i.id) >= i.qty ? `<span class="tag own" title="${esc(whereText(i.id, 4))}">${icon("box")}${fmt(owned(i.id))}</span>` : ""}</label></li>`; }).join("")}</ul>
+      <ul>${b.items.map(i => { const k = bundleItemKey(b, i); const on = isDone("bundles", k); return `<li><label class="bitem${on ? " on" : ""}"><input type="checkbox" data-bitem="${esc(k)}" data-bundle="${esc(b.id)}" ${on ? "checked" : ""}>${imgOf(i.id) ? `<img src="${imgOf(i.id)}" alt="" width="22" height="22">` : `<span class="dot"></span>`}<span>${i.qty > 1 ? `${i.qty}× ` : ""}${esc(i.name)}${i.quality ? ` <span class="faint">(${esc(i.quality)})</span>` : ""}</span>${!on && !complete && i.id && owned(i.id) >= i.qty ? `<span class="tag own" title="${esc(whereText(i.id, 4))}">${icon("box")}${fmt(owned(i.id))}</span>` : ""}</label></li>`; }).join("")}</ul>
       ${b.reward ? `<footer>${icon("gift")}${esc(b.reward)}</footer>` : ""}
     </article>`;
   }

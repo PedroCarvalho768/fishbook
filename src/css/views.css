@@ -27,7 +27,7 @@
   transition: background .15s var(--ease);
 }
 .cat:hover { background: var(--bg-2); color: inherit; }
-.cat-icon { width: 40px; height: 40px; border-radius: 11px; background: var(--surface); display: grid; place-items: center; color: var(--ink-2); }
+.cat-icon { width: 40px; height: 40px; border-radius: var(--r); background: var(--surface); display: grid; place-items: center; color: var(--ink-2); }
 .cat-icon svg { width: 20px; height: 20px; }
 .cat.done .cat-icon { background: var(--honey); color: var(--on-honey); }
 .cat-main { min-width: 0; display: flex; flex-direction: column; gap: 2px; }
@@ -64,17 +64,17 @@
 .mini-ing img { width: 20px; height: 20px; image-rendering: pixelated; }
 
 /* ---------- Friends ---------- */
-.fr-check { width: 30px; height: 30px; border-radius: 9px; display: grid; place-items: center; color: var(--on-honey); justify-self: center; }
+.fr-check { width: 30px; height: 30px; border-radius: var(--r-md); display: grid; place-items: center; color: var(--on-honey); justify-self: center; }
 .done .fr-check, .goal.done .fr-check { background: var(--honey); }
 .goal:not(.done) .fr-check { background: var(--surface); color: var(--ink-3); }
 .fr-check svg { width: 16px; height: 16px; stroke-width: 2.6; }
 .friend-row .sub svg { width: 14px; height: 14px; vertical-align: -2px; margin-right: 4px; }
 .hearts { display: flex; gap: 1px; flex-wrap: wrap; justify-content: flex-end; }
-.hearts button { border: 0; background: none; padding: 3px 1px; color: var(--ink-4); border-radius: 4px; line-height: 0; }
+.hearts button { border: 0; background: none; min-width: 24px; min-height: 26px; padding: 0; display: grid; place-items: center; color: var(--ink-4); border-radius: var(--r-xs); line-height: 0; }
 .hearts button svg { width: 17px; height: 17px; }
 .hearts button.on { color: var(--love); }
 .hearts button.goal { position: relative; }
-.hearts button.goal::after { content: ""; position: absolute; left: 3px; right: 3px; bottom: -2px; height: 2px; border-radius: 2px; background: var(--honey); }
+.hearts button.goal::after { content: ""; position: absolute; left: 3px; right: 3px; bottom: -2px; height: 2px; border-radius: var(--r-xs); background: var(--honey); }
 .hearts button:hover { color: oklch(0.72 0.19 10 / .7); }
 .hearts button.on:hover { color: var(--love); filter: brightness(1.15); }
 .friend-row { grid-template-columns: 40px 40px minmax(0, 1fr) auto; }
@@ -95,7 +95,7 @@
 .goal-where .faint { margin-left: auto; }
 .goal.done .goal-where { color: var(--honey); }
 .skill-pips { display: grid; grid-template-columns: repeat(10, 1fr); gap: 4px; }
-.skill-pips i { height: 8px; border-radius: 3px; background: var(--surface-2); }
+.skill-pips i { height: 8px; border-radius: var(--r-xs); background: var(--surface-2); }
 .skill-pips i.on { background: var(--honey); }
 
 /* ---------- Walnuts ---------- */
@@ -128,11 +128,11 @@
 .bundle header .num { font-size: var(--text-xs); color: var(--ink-3); font-weight: 700; }
 .bundle.complete header .num { color: var(--honey); }
 .bundle ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
-.bitem { display: flex; align-items: center; gap: 8px; font-size: var(--text-sm); padding: 3px 4px; border-radius: 6px; cursor: pointer; }
+.bitem { display: flex; align-items: center; gap: 8px; font-size: var(--text-sm); padding: 3px 4px; border-radius: var(--r-sm); cursor: pointer; }
 .bitem:hover { background: var(--surface); }
 .bitem input { accent-color: var(--honey); width: 16px; height: 16px; margin: 0; }
 .bitem img { width: 22px; height: 22px; image-rendering: pixelated; }
-.bitem .dot { width: 22px; height: 22px; border-radius: 6px; background: var(--surface-2); }
+.bitem .dot { width: 22px; height: 22px; border-radius: var(--r-sm); background: var(--surface-2); }
 .bitem.on span { color: var(--ink-3); text-decoration: line-through; text-decoration-color: var(--ink-4); }
 .bundle footer { font-size: var(--text-xs); color: var(--ink-3); display: flex; align-items: center; gap: 6px; margin-top: auto; padding-top: 4px; border-top: 1px solid var(--line-soft); }
 .bundle footer svg { width: 14px; height: 14px; color: var(--honey); }
@@ -154,16 +154,16 @@
 .paths dt { font-weight: 700; }
 .paths dd, .keys dd { margin: 0; color: var(--ink-2); }
 .keys dt { text-align: right; }
-code { font-family: ui-monospace, "Cascadia Code", Consolas, monospace; font-size: .92em; background: var(--bg); border: 1px solid var(--line-soft); padding: 1px 5px; border-radius: 5px; word-break: break-all; }
+code { font-family: ui-monospace, "Cascadia Code", Consolas, monospace; font-size: .92em; background: var(--bg); border: 1px solid var(--line-soft); padding: 1px 5px; border-radius: var(--r-sm); word-break: break-all; }
 
 /* ---------- Palette ---------- */
 dialog.palette-dlg { width: min(620px, calc(100vw - 24px)); padding: 10px; margin-top: 12vh; }
 .palette .search input { height: 46px; font-size: var(--text-md); }
 .palette ul { list-style: none; margin: 8px 0 0; padding: 0; max-height: min(56vh, 520px); overflow-y: auto; }
-.palette li { display: flex; align-items: center; gap: 10px; padding: 6px 8px; border-radius: 9px; cursor: pointer; }
+.palette li { display: flex; align-items: center; gap: 10px; padding: 6px 8px; border-radius: var(--r-md); cursor: pointer; }
 .palette li[aria-selected="true"] { background: var(--surface-3); }
 .palette li.none { color: var(--ink-3); cursor: default; padding: 14px; }
-.pal-icon { width: 36px; height: 36px; border-radius: 9px; background: var(--bg-2); display: grid; place-items: center; color: var(--ink-2); flex: none; }
+.pal-icon { width: 36px; height: 36px; border-radius: var(--r-md); background: var(--bg-2); display: grid; place-items: center; color: var(--ink-2); flex: none; }
 .pal-main { flex: 1; min-width: 0; display: flex; flex-direction: column; }
 .pal-main b { font-size: var(--text-sm); }
 .pal-main span { font-size: var(--text-xs); color: var(--ink-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -172,7 +172,7 @@ dialog.palette-dlg { width: min(620px, calc(100vw - 24px)); padding: 10px; margi
 /* ---------- drag and drop ---------- */
 body.dragging::after {
   content: "Drop your save file to load it"; position: fixed; inset: 12px; z-index: var(--z-toast);
-  border: 2px dashed var(--honey); border-radius: 20px; background: oklch(0.165 0.014 235 / .88);
+  border: 2px dashed var(--honey); border-radius: var(--r-lg); background: oklch(0.165 0.014 235 / .88);
   display: grid; place-items: center; font-size: var(--text-xl); font-weight: 800; color: var(--honey); pointer-events: none;
 }
 

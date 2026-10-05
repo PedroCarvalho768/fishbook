@@ -30,10 +30,17 @@ function fmtHour(h, compact = false) {
 
 function spriteHTML(img, name, cls = "") {
   const fb = esc((name || "?")[0]);
+  const size = cls.includes("portrait") ? 44 : cls.includes("sm") ? 28 : 40;
   return `<div class="sprite ${cls}">${img
-    ? `<img src="${img}" alt="" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fallback',textContent:'${fb}'}))">`
+    ? `<img src="${img}" alt="" width="${size}" height="${size}" loading="lazy" decoding="async" data-fb="${fb}">`
     : `<span class="fallback">${fb}</span>`}</div>`;
 }
+// broken sprite -> letter fallback (no inline handlers, so the page can run under a strict CSP)
+document.addEventListener("error", e => {
+  const img = e.target;
+  if (img.tagName !== "IMG" || !img.dataset.fb) return;
+  img.replaceWith(Object.assign(document.createElement("span"), { className: "fallback", textContent: img.dataset.fb }));
+}, true);
 const imgOf = id => DB.img[id] || null;
 
 function seasonsMini(seasons, current) {

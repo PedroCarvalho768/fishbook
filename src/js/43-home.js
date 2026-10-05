@@ -111,8 +111,8 @@ VIEWS.today = {
       const d = bdayDays(v);
       return `<li><span class="when ${d === 0 ? "today" : ""}">${d === 0 ? "Today" : d === 1 ? "Tomorrow" : `${weekday(v.birthday.day)} ${v.birthday.day}`}</span>
         ${spriteHTML(v.img, v.name, "sm portrait")}<div><a href="#/friends?item=${encodeURIComponent(v.id)}"><b>${esc(v.name)}</b></a> <span class="faint">${heartsOf(v)}/${heartsNeeded(v)} ♥</span>
-        ${(() => { const gift = v.loves.find(l => owned(l.id)); return gift ? `<p class="own-line">${imgOf(gift.id) ? `<img src="${imgOf(gift.id)}" alt="">` : ""}Give ${esc(gift.name)} · ${esc(whereText(gift.id, 1))}</p>`
-          : `<div class="mini-ing">${v.loves.slice(0, 5).map(l => imgOf(l.id) ? `<img src="${imgOf(l.id)}" alt="${esc(l.name)}" title="${esc(l.name)}">` : "").join("")}</div>`; })()}</div></li>`;
+        ${(() => { const gift = v.loves.find(l => owned(l.id)); return gift ? `<p class="own-line">${imgOf(gift.id) ? `<img src="${imgOf(gift.id)}" alt="" width="18" height="18">` : ""}Give ${esc(gift.name)} · ${esc(whereText(gift.id, 1))}</p>`
+          : `<div class="mini-ing">${v.loves.slice(0, 5).map(l => imgOf(l.id) ? `<img src="${imgOf(l.id)}" alt="${esc(l.name)}" title="${esc(l.name)}" width="20" height="20">` : "").join("")}</div>`; })()}</div></li>`;
     }).join("") : `<li class="none">No birthdays this week.</li>`;
 
     // fish today

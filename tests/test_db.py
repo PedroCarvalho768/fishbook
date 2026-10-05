@@ -101,3 +101,12 @@ class Integrity(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class GameData(unittest.TestCase):
+    """Values the game's Data/Fish decides (location tables decide seasons and times, so those come from the wiki)."""
+
+    def test_min_fishing_levels(self):
+        levels = {f["name"]: f["minLevel"] for f in DB["fish"] if f["source"] == "vanilla"}
+        for name, lvl in {"Stonefish": 3, "Ice Pip": 5, "Lava Eel": 7, "Glacierfish": 7, "Glacierfish Jr.": 7}.items():
+            self.assertEqual(levels[name], lvl, name)

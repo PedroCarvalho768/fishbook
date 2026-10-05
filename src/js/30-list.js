@@ -198,6 +198,6 @@ function ingredientsHTML(list) {
     const have = inv ? ownedFor(i.id) : null;
     const cls = inv ? (have >= i.qty ? "have" : "short") : "";
     const tip = inv ? (have >= i.qty ? `You have ${fmt(have)}${String(i.id).startsWith("-") ? "" : ": " + whereText(i.id, 4)}` : `You have ${fmt(have)} of ${i.qty}`) : "";
-    return `<span class="${cls}" ${tip ? `title="${esc(tip)}"` : ""}>${imgOf(i.id) ? `<img src="${imgOf(i.id)}" alt="">` : ""}${i.qty > 1 ? `${i.qty}× ` : ""}${esc(i.name)}${inv ? `<b class="num">${fmt(Math.min(have, 9999))}/${i.qty}</b>` : ""}</span>`;
+    return `<span class="${cls}" ${tip ? `title="${esc(tip)}"` : ""}>${imgOf(i.id) ? `<img src="${imgOf(i.id)}" alt="" width="22" height="22">` : ""}${i.qty > 1 ? `${i.qty}× ` : ""}${esc(i.name)}${inv ? `<b class="num">${fmt(Math.min(have, 9999))}/${i.qty}</b>` : ""}</span>`;
   }).join("")}</div>`;
 }

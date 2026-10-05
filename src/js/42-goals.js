@@ -66,7 +66,7 @@ VIEWS.friends = (() => {
       const f = DB.fishById?.[l.id], c = DB.cooking.find(c => c.yieldId === l.id);
       const href = f ? `#/fish?item=${encodeURIComponent(f.id)}` : c ? `#/cooking?item=${encodeURIComponent(c.id)}` : null;
       const n = owned(l.id);
-      return `<span class="${n ? "have" : ""}" ${n ? `title="${esc(whereText(l.id, 4))}"` : ""}>${imgOf(l.id) ? `<img src="${imgOf(l.id)}" alt="">` : ""}${href ? `<a href="${href}">${esc(l.name)}</a>` : esc(l.name)}${n ? `<b class="num">${fmt(n)}</b>` : ""}</span>`;
+      return `<span class="${n ? "have" : ""}" ${n ? `title="${esc(whereText(l.id, 4))}"` : ""}>${imgOf(l.id) ? `<img src="${imgOf(l.id)}" alt="" width="22" height="22">` : ""}${href ? `<a href="${href}">${esc(l.name)}</a>` : esc(l.name)}${n ? `<b class="num">${fmt(n)}</b>` : ""}</span>`;
     }).join("");
     const pts = val("friends", v.id) || 0;
     return `<div><div class="detail-inner">

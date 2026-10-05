@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "deny": [
+      "Edit(//c/Users/*/AppData/Roaming/StardewValley/**)",
+      "Edit(//c/Program Files (x86)/Steam/steamapps/common/Stardew Valley/**)",
+      "Edit(//d/SteamLibrary/steamapps/common/Stardew Valley/**)",
+      "Bash(git push --force *)",
+      "Bash(git push -f *)",
+      "Bash(rm -rf *)"
+    ],
+    "ask": [
+      "Bash(git push *)",
+      "Bash(gh repo create *)",
+      "Bash(gh api * -X *)"
+    ],
+    "allow": [
+      "Bash(python build.py)",
+      "Bash(python tools/build_db.py)",
+      "Bash(python -m unittest *)",
+      "Bash(npm test)",
+      "Bash(npm run build)",
+      "Bash(node tests/e2e.mjs)"
+    ]
+  }
+}
