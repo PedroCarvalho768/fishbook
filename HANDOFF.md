@@ -12,7 +12,7 @@ State on 2026-10-04: the tracker is complete and tested locally. Nothing is publ
 ## Waiting on the owner
 
 1. Compare the shown score with Qi's Walnut Room on the same save (open item in `SPEC.md`).
-2. Published at https://sdve.rikode.com.br (GitHub Pages from `/docs`; `DOMAIN` in `build.py` writes `docs/CNAME`).
+2. Published at https://sdve.rikode.com.br (Vercel project serving `/docs`, no build step).
 
 ## Next candidates
 

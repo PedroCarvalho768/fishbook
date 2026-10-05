@@ -14,7 +14,7 @@ import urllib.parse
 
 ROOT = pathlib.Path(__file__).parent
 SRC = ROOT / "src"
-DOMAIN = "sdve.rikode.com.br"  # GitHub Pages custom domain; also written to docs/CNAME
+DOMAIN = "sdve.rikode.com.br"  # Vercel production domain; used for canonical and og URLs
 IMG_DIR = ROOT / "data" / "img"
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36"
 
@@ -105,7 +105,7 @@ def main() -> None:
     out = ROOT / "fishbook.html"
     out.write_text(html.replace("<!--__PWA__-->", ""), encoding="utf-8")
 
-    # hostable site (GitHub Pages serves /docs): same app plus manifest, offline cache and icons
+    # hostable site (Vercel serves /docs): same app plus manifest, offline cache and icons
     site = ROOT / "docs"
     site.mkdir(exist_ok=True)
     origin = "https://" + DOMAIN
@@ -131,7 +131,6 @@ def main() -> None:
             (site / f.name).write_bytes(f.read_bytes())
     (site / ".nojekyll").write_text("", encoding="utf-8")
     (site / "robots.txt").write_text("User-agent: *\nAllow: /\n", encoding="utf-8")
-    (site / "CNAME").write_text(DOMAIN + "\n", encoding="utf-8")
     print(f"Built {out.name}: {out.stat().st_size // 1024} KB, {len(img)} sprites, {len(missing)} missing")
     if missing:
         print("  missing:", ", ".join(missing[:40]), "..." if len(missing) > 40 else "")

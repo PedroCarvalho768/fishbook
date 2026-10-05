@@ -42,4 +42,6 @@ IMPORTANT: read saves and mod files only. Copy a save before parsing it; the gam
 
 `npm test`: data invariants plus browser end-to-end tests (parser vs Python oracle, every page, live sync, offline). Needs Chrome at the default path or `CHROME_PATH`; finds a save in `data/research/save/tmp/` or `%APPDATA%/StardewValley/Saves`.
 
-Publishing (`gh repo create`, `git push`) waits for the owner's go-ahead.
+## Deploy
+
+Live at https://sdve.rikode.com.br (Vercel project `fishbook`, static `docs/`, no build step). After `python build.py` and `npm test`: `vercel deploy --prod --cwd docs`. Deploys and `git push` wait for the owner's go-ahead.
