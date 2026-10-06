@@ -39,7 +39,7 @@ VIEWS.friends = (() => {
     const h = heartsOf(v), need = heartsNeeded(v);
     const max = state.save?.friendStatus?.[v.id] === "Married" ? 14 : 10;
     return `<div class="hearts" role="group" aria-label="${esc(nameOf(v))}: ${h} of ${need} hearts needed">${Array.from({ length: max }, (_, i) =>
-      `<button type="button" class="${i < h ? "on" : ""}${i === need - 1 ? " goal" : ""}" data-heart="${esc(v.id)}" data-n="${i + 1}" aria-label="Set ${i + 1} hearts" title="${i + 1} hearts${i === need - 1 ? " (Perfection goal)" : ""}">${icon(i < h ? "heart-fill" : "heart")}</button>`).join("")}</div>`;
+      `<button type="button" class="${i < h ? "on" : ""}${i === need - 1 ? " goal" : ""}" data-heart="${esc(v.id)}" data-n="${i + 1}" aria-label="Set ${i + 1} hearts" title="${i + 1} hearts${i === need - 1 ? " (Perfection goal)" : ""}">${icon(i < h ? "heart-fill" : "heart-empty")}</button>`).join("")}</div>`;
   }
   function rowHTML(v) {
     const secret = !canSee(v.spoiler, v.id);
@@ -147,7 +147,7 @@ VIEWS.monsters = (() => {
         <span class="fr-check" aria-hidden="true">${done ? icon("check") : ""}</span>
         <div class="goal-main">
           <div class="goal-title"><h3>${esc(m.name)}</h3>${isManual("monsters", m.id) ? `<span class="tag manual">manual</span>` : ""}<span class="faint">${esc(m.targets.join(", "))}</span></div>
-          <div class="goal-bar"><div class="track"><div class="fill" style="width:${Math.min(100, pct(k, m.count))}%;--c:${done ? "var(--honey)" : "var(--now)"}"></div></div>
+          <div class="goal-bar"><div class="track"><div class="fill" style="width:${Math.min(100, pct(k, m.count))}%;--c:${done ? "var(--accent)" : "var(--now)"}"></div></div>
           <label class="goal-count"><span class="sr-only">${esc(m.name)} kills</span><input class="num-input" type="number" min="0" inputmode="numeric" value="${k}" data-kills="${esc(m.id)}"><span class="faint num">/ ${fmt(m.count)}</span></label></div>
           <p class="goal-where">${done ? `${icon("gift")}Claim from Gil: ${esc(m.reward)}` : `${icon("info")}<span>${esc(m.where || "")}${m.whereSve && spoilersOn() ? ` SVE: ${esc(m.whereSve)}` : ""}</span><span class="faint">${fmt(Math.max(0, m.count - k))} to go</span>`}</p>
         </div>

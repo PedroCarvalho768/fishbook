@@ -402,6 +402,21 @@ for f in cal["sve"].get("addedFestivals", []):
         festivals.append({"name": f["name"], "season": s, "days": f["days"], "fishing": (f.get("fishingAffected") or {}).get("detail", ""), "shops": False, "sve": True, "note": f.get("unlock", "")})
 qos = [{"recipe": q["recipe"], "season": q["season"].lower(), "day": q["day"], "year": q["year"]} for q in cal["queenOfSauce"]["year1"] + cal["queenOfSauce"]["year2"]]
 
+# ---------------------------------------------------------------- sprite fixes
+# Wiki file names that differ from the display name, verified against the wiki API on 2026-10-05.
+WIKI_FILE = {
+    "(O)438": "Large Goat Milk", "(O)DriedFruit": "Dried Fruit", "(O)DriedMushrooms": "Dried Mushrooms",
+    "(O)SmokedFish": "Smoked Fish", "(O)223": "Cookie", "(O)126": "Strange Doll (green)", "(O)127": "Strange Doll (yellow)",
+    "(O)688": "Warp Totem Farm", "(O)689": "Warp Totem Mountains", "(O)690": "Warp Totem Beach",
+    "(O)261": "Warp Totem Desert", "(O)886": "Warp Totem Island",
+}
+for key, name in WIKI_FILE.items():
+    images[key] = wiki_img(name)
+# Not on the SVE wiki: cropped from the mod's own textures (3x, like the wiki) into src/sprites/.
+for name in ("Small_Hardwood_Fence", "Hedge_Fence", "Butter_Churner"):
+    key = "(O)" + SVE_PREFIX + name + ("" if name == "Butter_Churner" else "_Tilesheet")
+    images[key] = f"local:{name}.png"
+
 # ---------------------------------------------------------------- write
 item_names = {q: it["name"] for q, it in items.items()}
 item_cats = {q: it.get("category") for q, it in items.items() if it.get("category") not in (None, 0)}

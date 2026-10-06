@@ -12,7 +12,15 @@ const LEGACY_KEY = "fishbook:sve:v1";
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-const icon = (id, cls = "i") => `<svg class="${cls}" aria-hidden="true"><use href="#i-${id}"/></svg>`;
+// In-game sprite when the build embedded one ("ui:<id>"), else the line icon. Sprites sit in an <svg>
+// so every "… svg" size rule applies to both. "heart-empty" is the heart sprite, dimmed in CSS.
+const spriteSvg = (src, cls) => `<svg class="${cls} spr" viewBox="0 0 1 1" aria-hidden="true"><image href="${src}" width="1" height="1"/></svg>`;
+const icon = (id, cls = "i") => {
+  const img = DB.img || {};
+  if (id === "any" && img["ui:sun"]) return `<span class="spr-pair">${spriteSvg(img["ui:sun"], cls)}${spriteSvg(img["ui:rain"], cls)}</span>`;
+  const src = img["ui:" + (id === "heart-fill" || id === "heart-empty" ? "heart" : id)];
+  return src ? spriteSvg(src, cls + (id === "heart-empty" ? " off" : "")) : `<svg class="${cls}" aria-hidden="true"><use href="#i-${id}"/></svg>`;
+};
 const cap = s => s ? s[0].toUpperCase() + s.slice(1) : s;
 const slug = s => String(s).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 const fmt = n => Math.round(n).toLocaleString();

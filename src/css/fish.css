@@ -13,7 +13,7 @@
 
 .active-filters { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 0 0 10px; font-size: var(--text-sm); color: var(--ink-3); }
 .active-filters:empty { display: none; }
-.pill-x { min-height: 24px; display: inline-flex; align-items: center; gap: 4px; border: 1px solid var(--line); background: var(--surface); color: var(--ink-2); border-radius: 99px; padding: 3px 6px 3px 10px; font-size: var(--text-xs); font-weight: 600; }
+.pill-x { min-height: 24px; display: inline-flex; align-items: center; gap: 4px; border: 1px solid var(--line); background: var(--surface); color: var(--ink-2); border-radius: 0; padding: 3px 6px 3px 10px; font-size: var(--text-xs); font-weight: 600; }
 .pill-x svg { width: 14px; height: 14px; }
 .pill-x:hover { color: var(--ink); border-color: var(--ink-3); }
 
@@ -27,7 +27,7 @@
 .fish-cols .r { text-align: right; justify-self: end; }
 .sort-btn { border: 0; background: none; padding: 2px 0; font-size: inherit; font-weight: inherit; color: inherit; }
 .sort-btn:hover { color: var(--ink); }
-.sort-btn[aria-pressed="true"] { color: var(--honey); }
+.sort-btn[aria-pressed="true"] { color: var(--accent-ink); }
 
 .fish-list { list-style: none; margin: 0; padding: 0; }
 .fish { border-bottom: 1px solid var(--line-soft); }
@@ -35,13 +35,13 @@
 .fish-row:hover, .fish:focus-within > .fish-row { background: var(--bg-2); }
 .fish.open > .fish-row { background: var(--surface); border-radius: var(--r) var(--r) 0 0; }
 .fish-row:hover .sprite, .fish.open .sprite { background: var(--surface-2); }
-.fish.caught .sprite img { filter: drop-shadow(0 0 6px oklch(0.8 0.155 70 / .35)); }
+.fish.caught .sprite img { filter: drop-shadow(0 0 6px oklch(0.82 0.15 78 / .35)); }
 
 .name-cell { min-width: 0; }
 .name-btn { border: 0; background: none; padding: 0; text-align: left; display: inline-flex; align-items: center; gap: 8px; max-width: 100%; font-size: var(--text-md); font-weight: 700; letter-spacing: -0.01em; color: var(--ink); }
 .name-btn::after { content: ""; position: absolute; inset: 0; border-radius: var(--r); }
 .name-btn:focus-visible { outline: none; }
-.name-btn:focus-visible::after { outline: 2px solid var(--honey); outline-offset: -2px; }
+.name-btn:focus-visible::after { outline: 2px solid var(--accent); outline-offset: -2px; }
 .name-btn .nm { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .locs { margin-top: 2px; font-size: var(--text-sm); color: var(--ink-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .locs .sep, .sub .sep { color: var(--ink-3); margin: 0 5px; }
@@ -51,11 +51,11 @@
 .fish-seasons span svg { width: 13px; height: 13px; }
 
 .timebar { position: relative; height: 22px; }
-.timebar .tb-rail { position: absolute; left: 0; right: 0; top: 8px; height: 6px; border-radius: 99px; background: var(--surface-2); overflow: hidden; }
-.timebar .seg-t { position: absolute; top: 0; bottom: 0; background: var(--ink-3); border-radius: 99px; }
+.timebar .tb-rail { position: absolute; left: 0; right: 0; top: 8px; height: 6px; border-radius: 0; background: var(--surface-2); overflow: hidden; }
+.timebar .seg-t { position: absolute; top: 0; bottom: 0; background: var(--ink-3); border-radius: 0; }
 .fish.st-now .timebar .seg-t { background: var(--now); }
 .fish.st-later .timebar .seg-t, .fish.st-leaving .timebar .seg-t { background: var(--ink-2); }
-.fish.caught .timebar .seg-t { background: oklch(0.8 0.155 70 / .55); }
+.fish.caught .timebar .seg-t { background: oklch(0.82 0.15 78 / .55); }
 .timebar .mark { position: absolute; top: 3px; bottom: 3px; width: 2px; margin-left: -1px; background: var(--ink); border-radius: var(--r-xs); box-shadow: 0 0 0 2px var(--bg); }
 .fish-row:hover .timebar .mark, .fish.open .timebar .mark { box-shadow: 0 0 0 2px var(--bg-2); }
 .time-txt { font-size: var(--text-xs); color: var(--ink-3); font-variant-numeric: tabular-nums; margin-top: -2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -69,10 +69,10 @@
 .diff { display: flex; flex-direction: column; gap: 4px; }
 .diff .v { display: flex; justify-content: space-between; font-size: var(--text-xs); font-weight: 600; color: var(--ink-2); font-variant-numeric: tabular-nums; }
 .diff .v b { color: var(--ink); font-weight: 700; }
-.diff .meter { height: 4px; border-radius: 99px; background: var(--surface-2); overflow: hidden; }
+.diff .meter { height: 4px; border-radius: 0; background: var(--surface-2); overflow: hidden; }
 .diff .meter i { display: block; height: 100%; border-radius: inherit; background: var(--dc); }
 .price { text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--ink); }
-.price small { color: var(--honey); font-weight: 700; margin-left: 1px; }
+.price small { color: var(--accent-ink); font-weight: 700; margin-left: 1px; }
 .fish-detail { padding-left: calc(14px + 44px + 14px + 52px + 14px); }
 .fish.leaving-out { animation: leave .45s var(--ease) forwards; }
 

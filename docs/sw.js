@@ -1,5 +1,5 @@
 /* Offline cache: serve the app from cache, refresh it in the background. */
-const VERSION = "5e9784616e";
+const VERSION = "1e10b22108";
 const CACHE = "fishbook-" + VERSION;
 const ASSETS = ["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "icon-maskable-512.png"];
 

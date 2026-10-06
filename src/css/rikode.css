@@ -1,0 +1,53 @@
+/* Rikode frame + in-game sprites. Loads last, so it overrides the component sheets. */
+/* Jacquard is pixel blackletter: lowercase only, 32px and up, no smoothing (rikode marca, 05). */
+.display { font-family: var(--f-display); font-weight: 400; text-transform: lowercase; -webkit-font-smoothing: none; letter-spacing: .01em; line-height: 1.02; }
+.mono, .kbd { font-family: var(--f-mono); font-weight: 500; }
+.label { font-family: var(--f-mono); font-weight: 400; text-transform: uppercase; letter-spacing: .08em; font-size: var(--text-2xs); }
+
+svg.spr { stroke: none; overflow: visible; }
+svg.spr image { image-rendering: pixelated; }
+svg.spr.off { filter: grayscale(1) brightness(1.6); opacity: .55; }   /* empty heart: >= 3:1, still clearly "off" */
+.spr-pair { display: inline-flex; gap: 2px; align-items: center; }
+
+/* rikode frame: wordmark, labels and numbers */
+.brand { display: grid; grid-template-columns: auto 1fr; column-gap: 10px; row-gap: 6px; align-items: end; }
+.brand > span:not(.brand-mark) { display: contents; }
+.brand-mark { width: auto; height: auto; background: none; color: var(--accent); grid-row: 1; padding-bottom: 7px; }   /* R sits on the wordmark's baseline */
+.brand b { grid-column: 2; grid-row: 1; }
+.brand small { grid-column: 2; grid-row: 2; margin-top: 0; }
+.brand-mark svg { width: 28px; height: 24px; }            /* the R: 14x12 grid at 2x, never a broken scale */
+.brand b { font-family: var(--f-display); font-weight: 400; text-transform: lowercase; -webkit-font-smoothing: none; font-size: 3rem; line-height: .8; letter-spacing: .01em; }
+.brand small { font-family: var(--f-mono); text-transform: uppercase; letter-spacing: .08em; font-size: var(--text-2xs); margin-top: 4px; }
+.nav h3 { font-family: var(--f-mono); font-weight: 400; text-transform: uppercase; letter-spacing: .08em; font-size: var(--text-2xs); }
+.nav a svg.spr { width: 16px; height: 16px; }
+.nav .pct, .weight, .tag, .clockbar .clock, .clockbar .day output { font-family: var(--f-mono); font-weight: 500; }
+.nav .pct.done, .cat.done .cat-hint { color: var(--accent-ink); }
+.view-head h1, .hero-text h1 { font-family: var(--f-display); font-weight: 400; text-transform: lowercase; -webkit-font-smoothing: none; font-size: 4rem; letter-spacing: .01em; line-height: .85; }
+.view-head h1 .weight, .view-head h1 .tag { font-size: var(--text-2xs); text-transform: none; -webkit-font-smoothing: auto; letter-spacing: 0; }
+.view-head .score .big, .hero-ring b, .cat-pts { font-variant-numeric: tabular-nums; }   /* big numbers stay Archivo: friendlier than mono at size */
+.rail .dither { display: block; flex: none; width: calc(100% + 28px); height: 64px; margin: 0 -14px -18px; color: var(--accent); image-rendering: pixelated; }
+
+/* sprites sized at whole multiples of the game's 16px grid where the layout allows */
+.cat-icon { background: var(--surface-2); }
+.cat-icon svg.spr { width: 32px; height: 32px; }
+.cat.done .cat-icon { background: var(--accent-dim); box-shadow: inset 0 0 0 1px var(--accent); }
+.empty .art.spr { width: 64px; height: 64px; }
+.seg button svg.spr { width: 24px; height: 16px; }
+.seg button[aria-pressed="false"] svg.spr { filter: grayscale(.85); opacity: .6; }
+.seg button:hover svg.spr { filter: none; opacity: 1; }
+.fish-seasons span { width: 28px; height: 22px; }
+.fish-seasons span svg.spr, .seasons-mini span svg.spr { width: 24px; height: 16px; }
+.seasons-mini span { width: 28px; }
+.fish-seasons span:not(.on), .seasons-mini span:not(.on) { background: none; box-shadow: none; }
+.fish-seasons span:not(.on) svg.spr, .seasons-mini span:not(.on) svg.spr { filter: grayscale(1); opacity: .22; }
+.wx svg.spr { width: 16px; height: 16px; }
+.wx .spr-pair svg.spr { width: 14px; height: 14px; }
+.hearts button svg.spr { width: 18px; height: 18px; }
+@media (max-width: 720px) {
+  .view-head h1, .hero-text h1 { font-size: 3rem; }
+}
+
+/* wide screens: center the page column instead of leaving a dead strip on the right */
+.view { margin-inline: auto; }
+.nav a > span:not(.pct) { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.nav .pct { font-size: var(--text-2xs); }

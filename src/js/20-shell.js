@@ -22,7 +22,7 @@ function renderView(keepScroll = false) {
     el.innerHTML = errorScreen();
   }
   currentRoute = r;
-  document.title = `${VIEWS[r] ? PAGE_TITLE[r] || "Fishbook" : "Page not found"} · Fishbook`;
+  document.title = `${VIEWS[r] ? PAGE_TITLE[r] || "Almanac" : "Page not found"} · Almanac`;
   renderNav();
   if (keepScroll) scrollTo(0, y);
 }
@@ -210,7 +210,7 @@ $("#settings-btn").addEventListener("click", () => {
         <button class="ghost-btn danger" type="button" data-act="clear-manual" ${manualCount ? "" : "disabled"}>${icon("reset")}Clear</button></div>
       <div class="set-row"><div><b>Loaded save</b><span>${state.save ? `${esc(state.save.farmer)}, ${esc(state.save.farm)} Farm` : "No save loaded."}</span></div>
         <button class="ghost-btn danger" type="button" data-act="forget-save" ${state.save ? "" : "disabled"}>${icon("x")}Forget</button></div>
-      <div class="set-row"><div><b>Delete all Fishbook data</b><span>Removes your loaded save, manual ticks, settings and live-sync link from this browser.</span></div>
+      <div class="set-row"><div><b>Delete all Almanac data</b><span>Removes your loaded save, manual ticks, settings and live-sync link from this browser.</span></div>
         <button class="ghost-btn danger" type="button" data-act="wipe">${icon("x")}Delete…</button></div>
       <div class="set-row"><div><b>Keyboard shortcuts</b><span>Press <span class="kbd">?</span> anywhere.</span></div><button class="ghost-btn" type="button" data-act="keys">${icon("keyboard")}Show</button></div>
     </div>
@@ -258,7 +258,7 @@ function exportProgress() {
   const data = { app: "fishbook", version: 2, exported: new Date().toISOString(), state: { ...state, prevSave: null } };
   const a = document.createElement("a");
   a.href = URL.createObjectURL(new Blob([JSON.stringify(data)], { type: "application/json" }));
-  a.download = `fishbook-${slug(state.save?.farm || "progress")}-${new Date().toISOString().slice(0, 10)}.json`;
+  a.download = `almanac-${slug(state.save?.farm || "progress")}-${new Date().toISOString().slice(0, 10)}.json`;
   a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 1000);
   toast("Progress exported");
 }
@@ -289,7 +289,7 @@ async function importProgress(file) {
       return;
     }
     throw new Error("unknown");
-  } catch { toast("That file isn't a Fishbook backup. Nothing changed."); }
+  } catch { toast("That file isn't an Almanac backup. Nothing changed."); }
 }
 
 /* ---------- global click actions ---------- */
@@ -366,3 +366,18 @@ function fullRender() {
   renderSaveCard(); renderClock(); renderSpoilerBtn(); renderView(true);
 }
 bus.on("progress", () => { renderNav(); renderSaveCard(); });
+
+/* ---------- rikode dither: 1-bit Bayer 8x8 fade in pink, once, at the foot of the rail ---------- */
+const BAYER = [0, 32, 8, 40, 2, 34, 10, 42, 48, 16, 56, 24, 50, 18, 58, 26, 12, 44, 4, 36, 14, 46, 6, 38, 60, 28, 52, 20, 62, 30, 54, 22,
+  3, 35, 11, 43, 1, 33, 9, 41, 51, 19, 59, 27, 49, 17, 57, 25, 15, 47, 7, 39, 13, 45, 5, 37, 63, 31, 55, 23, 61, 29, 53, 21];
+function drawDither(cv, cell = 4) {
+  const w = cv.width = Math.max(1, Math.round(cv.clientWidth / cell)), h = cv.height = Math.max(1, Math.round(cv.clientHeight / cell));
+  const ctx = cv.getContext("2d");
+  ctx.fillStyle = getComputedStyle(cv).color;
+  for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) {
+    const t = y / h;
+    if (t * t > (BAYER[(y % 8) * 8 + (x % 8)] + 0.5) / 64) ctx.fillRect(x, y, 1, 1);
+  }
+}
+const ditherEl = $(".rail .dither");
+if (ditherEl) { drawDither(ditherEl); new ResizeObserver(() => drawDither(ditherEl)).observe(ditherEl); }

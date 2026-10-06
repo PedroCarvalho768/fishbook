@@ -72,7 +72,7 @@ async function pickAndSync() {
     const [h] = await window.showOpenFilePicker({ id: "stardew-save", multiple: false, excludeAcceptAllOption: false });
     await saveHandle(h);
     await startSync(h);
-    toast(`${icon("refresh")}Live sync on. Fishbook will update by itself each time you sleep in-game.`, null, 6000);
+    toast(`${icon("refresh")}Live sync on. Almanac will update by itself each time you sleep in-game.`, null, 6000);
   } catch (e) {
     if (e.name !== "AbortError") toast("Couldn't open that file for syncing. Try loading it once instead.");
   }

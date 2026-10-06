@@ -8,7 +8,7 @@ import subprocess
 import unittest
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-SHIPPED = [ROOT / "fishbook.html", ROOT / "docs" / "index.html"]
+SHIPPED = [ROOT / "almanac.html", ROOT / "docs" / "index.html"]
 SECRET = re.compile(r"(sk-[A-Za-z0-9]{20,}|ghp_[A-Za-z0-9]{20,}|gho_[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16}|xox[bp]-[A-Za-z0-9-]{10,}|AIza[0-9A-Za-z_-]{30,})")
 
 

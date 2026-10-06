@@ -22,4 +22,4 @@ State on 2026-10-04: the tracker is complete and tested locally. Nothing is publ
 
 ## Files touched
 
-`src/`, `tools/`, `tests/`, `data/db.json`, `data/fish.json`, `build.py`, `docs/`, `fishbook.html`, root docs. Verify with `npm test` (21 Python checks plus 38 browser checks).
+`src/`, `tools/`, `tests/`, `data/db.json`, `data/fish.json`, `build.py`, `docs/`, `almanac.html`, root docs. Verify with `npm test` (21 Python checks plus 38 browser checks).

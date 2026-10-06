@@ -1,8 +1,8 @@
-# Fishbook spec
+# Almanac spec
 
 ## Premise
 
-A Stardew Valley Expanded player chasing Perfection keeps the game on one screen and needs to know, without opening the wiki, how far they are and what to do in the current in-game day. Fishbook reads their save in the browser, fills in all eleven Perfection categories, and turns what's missing into today's actions. The owner plays SVE 1.15.11 on Stardew Valley 1.6.15 with about 60 other mods.
+A Stardew Valley Expanded player chasing Perfection keeps the game on one screen and needs to know, without opening the wiki, how far they are and what to do in the current in-game day. Almanac reads their save in the browser, fills in all eleven Perfection categories, and turns what's missing into today's actions. The owner plays SVE 1.15.11 on Stardew Valley 1.6.15 with about 60 other mods.
 
 ## Locked decisions
 

@@ -11,7 +11,7 @@ Stardew Valley players running the Stardew Valley Expanded mod, working toward t
 A single-file, offline Perfection tracker for Stardew Valley 1.6 + SVE. It reads the player's save file in the browser and shows every Perfection category (shipping, fish, cooking, crafting, friends, monsters, stardrops, walnuts, farmer level, obelisks, Gold Clock) plus bundles and the museum. The core questions it answers at a glance: "How close am I to Perfection, and what should I do today?" Manual ticking works without a save. Success means the player never opens the wiki mid-session.
 
 ## Brand Personality
-Cozy, precise, quick. Feels like a well-made companion app for the game: warm lamplight on a night dock, not a spreadsheet and not a pixel-art costume.
+Cozy, precise, quick. A Rikode product (Pedro's personal brand, rules in `D:/MENTORIA/marca`), bent toward the game: Jacquard pixel wordmark and page titles, Martian Mono labels, square corners and the pink R mark and Bayer dither stay; the night is warmed to a cabin-at-night umber and Stardew gold carries progress, money and primary actions (rikode pink is brand-only). The coziness comes from the game's own sprites, used for every icon that has an in-game counterpart.
 
 ## Anti-references
 - The source Google Sheet: dense rows, checkboxes, multiline cells.

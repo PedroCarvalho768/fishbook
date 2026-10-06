@@ -133,7 +133,7 @@ const bundleDone = b => isDone("bundleDone", b.id) || b.items.filter(i => isDone
 
 VIEWS.bundles = (() => {
   function render(el) {
-    if (!bundlesList().length) { el.innerHTML = `<div class="empty">${icon("box", "art i")}<h2>Bundle data unavailable</h2></div>`; return; }
+    if (!bundlesList().length) { el.innerHTML = `<div class="empty">${icon("bundle", "art i")}<h2>Bundle data unavailable</h2></div>`; return; }
     const all = bundlesList();
     const rooms = [...new Set(all.map(b => b.room))];
     const done = all.filter(bundleDone).length;

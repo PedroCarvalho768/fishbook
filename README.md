@@ -1,4 +1,4 @@
-# Fishbook: Stardew Valley Expanded perfection tracker
+# Almanac: Stardew Valley Expanded perfection tracker
 
 A single-page tracker for Perfection in Stardew Valley 1.6 with Stardew Valley Expanded 1.15.
 
@@ -8,7 +8,7 @@ A single-page tracker for Perfection in Stardew Valley 1.6 with Stardew Valley E
 - **Today**: fish biting now, birthdays, crops to plant before the season ends, Queen of Sauce, festivals.
 - Spoiler-safe for SVE's story areas and characters. Works offline; your save never leaves the browser.
 
-Use it online (GitHub Pages, installable as an app) or download `fishbook.html` and open it directly.
+Use it online at https://sdve.rikode.com.br (installable as an app) or download `almanac.html` and open it directly.
 
 ## Development
 
@@ -20,6 +20,6 @@ npm test               # data invariants + end-to-end tests against your own sav
 
 `data/db.json` is the merged database. Rebuilding it needs the research inputs in `data/research/`
 (game and SVE data extracted from a local install), which are not committed. `python build.py` alone
-rebuilds the app from `src/` and `data/db.json`, writing `fishbook.html` and the hosted site in `docs/`.
+rebuilds the app from `src/` and `data/db.json`, writing `almanac.html` and the hosted site in `docs/`.
 
 Game data © ConcernedApe; SVE © FlashShifter. Guidance text from the Stardew Valley and SVE wikis.

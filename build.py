@@ -1,4 +1,4 @@
-"""Build fishbook.html: bundle src/ (CSS + JS) with data/db.json and embed every sprite as a data URI,
+"""Build almanac.html: bundle src/ (CSS + JS) with data/db.json and embed every sprite as a data URI,
 so the output is one offline file.
 
 Usage: python tools/build_db.py && python build.py
@@ -26,6 +26,9 @@ def cache_path(url: str) -> pathlib.Path:
 
 
 def fetch(url: str) -> pathlib.Path | None:
+    if url.startswith("local:"):  # committed sprite in src/sprites/
+        path = SRC / "sprites" / url[6:]
+        return path if path.exists() else None
     path = cache_path(url)
     if path.exists():
         return path if path.stat().st_size else None
@@ -40,6 +43,26 @@ def fetch(url: str) -> pathlib.Path | None:
         miss.touch()
         return None
     return path
+
+
+def wiki_file(name: str) -> str:
+    fname = name.replace(" ", "_") + ".png"
+    h = hashlib.md5(fname.encode("utf-8")).hexdigest()
+    return f"https://stardewvalleywiki.com/mediawiki/images/{h[0]}/{h[:2]}/{fname}"
+
+
+# UI glyphs drawn with in-game sprites (wiki file names, checked against the wiki API on 2026-10-05).
+# icon(id) in 00-core.js uses "ui:<id>" when present; plain controls (search, close, chevrons) stay SVG.
+UI_SPRITES = {
+    "spring": "Spring", "summer": "Summer", "fall": "Fall", "winter": "Winter",
+    "sun": "Sunny", "rain": "Rain",
+    "home": "Gold Quality", "calendar": "Calendar", "sprout": "Parsnip", "fish": "Sardine",
+    "pot": "Cooking Icon", "hammer": "Crafting Tab", "heart": "HeartIconLarge", "sword": "Rusty Sword",
+    "star": "Stardrop", "nut": "Golden Walnut", "farm": "Farming", "skills": "Skills Tab Icon",
+    "clock": "Gold Clock", "box": "Chest", "bundle": "Bundle Green", "museum": "Ancient Doll",
+    "gift": "Gift Icon", "cake": "Pink Cake", "info": "Quests Icon", "scroll": "Dwarf Scroll I",
+    "trophy": "Stardew Hero Trophy", "collection": "Collections Tab",
+}
 
 
 def sniff(data: bytes) -> str:
@@ -75,6 +98,7 @@ def main() -> None:
     IMG_DIR.mkdir(parents=True, exist_ok=True)
     db = json.loads((ROOT / "data" / "db.json").read_text(encoding="utf-8"))
     urls = db.pop("images")
+    urls.update({"ui:" + k: wiki_file(v) for k, v in UI_SPRITES.items()})
     with cf.ThreadPoolExecutor(16) as pool:
         paths = dict(zip(urls.keys(), pool.map(fetch, urls.values())))
     img, missing = {}, []
@@ -96,13 +120,13 @@ def main() -> None:
     for v in db["villagers"]:
         v["img"] = img.get("npc:" + v["id"])
 
-    css = "\n".join((SRC / "css" / n).read_text(encoding="utf-8") for n in ["base.css", "shell.css", "fish.css", "views.css"])
+    css = "\n".join((SRC / "css" / n).read_text(encoding="utf-8") for n in ["base.css", "shell.css", "fish.css", "views.css", "rikode.css"])
     js = "\n".join(p.read_text(encoding="utf-8") for p in sorted((SRC / "js").glob("*.js")))
     payload = json.dumps(db, ensure_ascii=False, separators=(",", ":")).replace("</", r"<\/")
     html = (SRC / "index.html").read_text(encoding="utf-8")
     html = html.replace("/*__CSS__*/", css).replace("/*__JS__*/", js).replace("/*__DB__*/{}", payload)
     html = html.replace("<!--__CSP__-->", csp_meta(html))
-    out = ROOT / "fishbook.html"
+    out = ROOT / "almanac.html"
     out.write_text(html.replace("<!--__PWA__-->", ""), encoding="utf-8")
 
     # hostable site (Vercel serves /docs): same app plus manifest, offline cache and icons
@@ -114,7 +138,7 @@ def main() -> None:
         '<link rel="manifest" href="manifest.webmanifest">',
         '<link rel="apple-touch-icon" href="icon-192.png">',
         '<meta property="og:type" content="website">',
-        '<meta property="og:title" content="Fishbook: Stardew Valley Expanded perfection tracker">',
+        '<meta property="og:title" content="Almanac: Stardew Valley Expanded perfection tracker">',
         '<meta property="og:description" content="Load your save and see what\'s left for Perfection in SVE: fish, shipping, recipes, friends, walnuts and more.">',
         f'<link rel="canonical" href="{origin}/">',
         f'<meta property="og:url" content="{origin}/">',

@@ -48,7 +48,7 @@ const CATEGORIES = [
     calc: () => ({ done: DB.stardrops.filter(s => isDone("stardrops", s.id)).length, total: DB.stardrops.length }) },
   { id: "walnuts", label: "Golden Walnuts", long: "Golden Walnuts found", weight: 5, icon: "nut", route: "walnuts",
     calc: () => ({ done: walnutsFound(), total: 130 }) },
-  { id: "farmer", label: "Farmer level", long: "Farmer level", weight: 5, icon: "trophy", route: "farm",
+  { id: "farmer", label: "Farmer level", long: "Farmer level", weight: 5, icon: "skills", route: "farm",
     calc: () => ({ done: Math.min(25, farmerLevel()), total: 25 }) },
   { id: "obelisks", label: "Obelisks", long: "Obelisks on the farm", weight: 4, icon: "farm", route: "farm",
     calc: () => { const l = DB.buildings.filter(b => b.kind === "obelisk"); return { done: l.filter(b => isDone("buildings", b.id)).length, total: l.length }; } },
@@ -73,6 +73,7 @@ const NAV = [
   { title: null, items: [
     { route: "", label: "Perfection", icon: "home" },
     { route: "today", label: "Today", icon: "calendar" },
+    { route: "missing", label: "Everything left", icon: "collection" },
   ] },
   { title: "Perfection", items: [
     { route: "shipping", label: "Shipping", icon: "sprout", cat: "shipping" },
@@ -82,11 +83,11 @@ const NAV = [
     { route: "friends", label: "Friends", icon: "heart", cat: "friends" },
     { route: "monsters", label: "Monsters", icon: "sword", cat: "monsters" },
     { route: "stardrops", label: "Stardrops", icon: "star", cat: "stardrops" },
-    { route: "walnuts", label: "Golden Walnuts", icon: "nut", cat: "walnuts" },
+    { route: "walnuts", label: "Walnuts", icon: "nut", cat: "walnuts" },
     { route: "farm", label: "Farm & skills", icon: "farm", cats: ["farmer", "obelisks", "clock"] },
   ] },
   { title: "Beyond perfection", items: [
-    { route: "bundles", label: "Bundles", icon: "box", beyond: "bundles" },
+    { route: "bundles", label: "Bundles", icon: "bundle", beyond: "bundles" },
     { route: "museum", label: "Museum", icon: "museum", beyond: "museum" },
   ] },
 ];

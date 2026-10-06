@@ -69,7 +69,7 @@ async function main() {
       const F = oracle.farmers[0], W = oracle.world;
 
       const p = await newPage();
-      await p.goto(`${BASE}/fishbook.html`);
+      await p.goto(`${BASE}/almanac.html`);
       const t0 = Date.now();
       await p.setInputFiles("#save-file", copy);
       await p.waitForFunction(k => JSON.parse(localStorage.getItem(k) || "{}").save, KEY, { timeout: 20000 });
@@ -133,7 +133,7 @@ async function main() {
         10 * frac(expDrops.length, 7) + 5 * frac(W.goldenWalnutsFound, 130) + 5 * frac(lvl, 25) +
         4 * frac(["Earth Obelisk", "Water Obelisk", "Desert Obelisk", "Island Obelisk"].filter(b => expBuild.includes(b)).length, 4) +
         10 * (expBuild.includes("Gold Clock") ? 1 : 0) + (W.perfectionWaivers || 0);
-      await p.goto(`${BASE}/fishbook.html#/`); await p.waitForTimeout(300);
+      await p.goto(`${BASE}/almanac.html#/`); await p.waitForTimeout(300);
       const shown = parseFloat(await p.textContent(".hero-ring b"));
       ok(Math.abs(shown - expected) < 0.06, `perfection score ${shown}% matches independent calculation (${expected.toFixed(2)}%)`);
       await p.context().close();
@@ -143,18 +143,18 @@ async function main() {
     console.log("Interface");
     {
       const p = await newPage();
-      await p.goto(`${BASE}/fishbook.html`);
-      for (const r of ["", "today", "fish", "shipping", "cooking", "crafting", "friends", "monsters", "stardrops", "walnuts", "farm", "bundles", "museum"]) {
-        await p.goto(`${BASE}/fishbook.html#/${r}`); await p.waitForTimeout(150);
+      await p.goto(`${BASE}/almanac.html`);
+      for (const r of ["", "today", "missing", "fish", "shipping", "cooking", "crafting", "friends", "monsters", "stardrops", "walnuts", "farm", "bundles", "museum"]) {
+        await p.goto(`${BASE}/almanac.html#/${r}`); await p.waitForTimeout(150);
         const h = await p.textContent("#view h1");
         ok(!!h && errors.length === 0, `page #/${r || "(home)"} renders: ${h?.trim().slice(0, 30)}`, errors.splice(0).join(" | "));
       }
-      await p.goto(`${BASE}/fishbook.html#/shipping`); await p.waitForTimeout(200);
+      await p.goto(`${BASE}/almanac.html#/shipping`); await p.waitForTimeout(200);
       await p.keyboard.press("j"); await p.keyboard.press("x"); await p.waitForTimeout(200);
       ok((await p.textContent('#nav a[href="#/shipping"] .pct')).startsWith("1/"), "keyboard j + x ticks an item");
-      await p.goto(`${BASE}/fishbook.html#/friends`); await p.waitForTimeout(200);
+      await p.goto(`${BASE}/almanac.html#/friends`); await p.waitForTimeout(200);
       await p.click('.item:first-child [data-n="10"]');
-      await p.goto(`${BASE}/fishbook.html#/monsters`); await p.waitForTimeout(200);
+      await p.goto(`${BASE}/almanac.html#/monsters`); await p.waitForTimeout(200);
       await p.fill('[data-kills="Slimes"]', "1000"); await p.press('[data-kills="Slimes"]', "Tab");
       await p.reload(); await p.waitForTimeout(300);
       ok((await p.textContent('#nav a[href="#/monsters"] .pct')).startsWith("1/"), "manual progress survives a reload");
@@ -166,7 +166,7 @@ async function main() {
       await p.context().close();
 
       const m = await newPage({ width: 390, height: 844 });
-      await m.goto(`${BASE}/fishbook.html#/today`); await m.waitForTimeout(200);
+      await m.goto(`${BASE}/almanac.html#/today`); await m.waitForTimeout(200);
       const overflow = await m.evaluate(() => document.documentElement.scrollWidth - innerWidth);
       ok(overflow <= 1, `no horizontal overflow on a phone (${overflow}px)`);
       await m.click("#menu-btn"); await m.waitForTimeout(350);
@@ -179,7 +179,7 @@ async function main() {
     if (!savePath) skip("live sync needs a save file");
     else {
       const p = await newPage();
-      await p.goto(`${BASE}/fishbook.html`);
+      await p.goto(`${BASE}/almanac.html`);
       const xml = fs.readFileSync(savePath, "utf8").replace(/^\uFEFF/, "");
       // stand in for the file picker: put the save in the origin-private file system and register its handle
       await p.evaluate(async xml => {
