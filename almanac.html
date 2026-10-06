@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-Hi5PTgGV8ly5UsF+0pmp8Z6LDmut5hyAN+IbYvOZwq0=' 'sha256-x02nqMFGQwIg3ZbfSCbmTysxQbKQJhUJRJLPLIprP/Q='; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src data: blob:; connect-src 'self'; worker-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-Hi5PTgGV8ly5UsF+0pmp8Z6LDmut5hyAN+IbYvOZwq0=' 'sha256-2tMK2L9IwvxFUk9ircAdfcsqanqQmjB2hqLmWT57jK4='; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src data: blob:; connect-src 'self'; worker-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
 <title>Almanac · Stardew Valley Expanded perfection tracker</title>
 <meta name="description" content="Track Perfection in Stardew Valley Expanded: load your save, see what's left in every category, and plan each in-game day.">
 <meta name="theme-color" content="#150F0C">
@@ -3496,6 +3496,12 @@ resumeSync();
 // installable app when hosted (the site build adds a manifest; the single offline file doesn't)
 if (location.protocol.startsWith("http") && "serviceWorker" in navigator && document.querySelector('link[rel="manifest"]')) {
   addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(e => console.warn("service worker", e)));
+  // a new deploy's worker took over a page the old one served: reload once to show the new version.
+  // Only on updates (a controller already existed), so the first install never reloads.
+  if (navigator.serviceWorker.controller) {
+    let reloaded = false;
+    navigator.serviceWorker.addEventListener("controllerchange", () => { if (!reloaded) { reloaded = true; location.reload(); } });
+  }
 }
 
 })();
